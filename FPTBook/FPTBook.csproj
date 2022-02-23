@@ -216,6 +216,7 @@
     <Content Include="assets\css\Pretty-Registration-Form.css" />
     <Content Include="assets\css\Register-form.css" />
     <Content Include="assets\css\Registration-Form-with-Photo.css" />
+    <Content Include="assets\css\untitled.css" />
     <Content Include="assets\css\vanilla-zoom.min.css" />
     <Content Include="assets\fonts\fa-brands-400.svg" />
     <Content Include="assets\fonts\fa-regular-400.svg" />
@@ -228,6 +229,7 @@
     <Content Include="assets\fonts\ionicons.svg" />
     <Content Include="assets\fonts\simple-line-icons.min.css" />
     <Content Include="assets\fonts\Simple-Line-Icons.svg" />
+    <Content Include="assets\img\755e3a5d6ebea2e0fbaf.jpg" />
     <Content Include="assets\img\avatars\avatar1.jpeg" />
     <Content Include="assets\img\avatars\avatar1.jpg" />
     <Content Include="assets\img\avatars\avatar2.jpeg" />
