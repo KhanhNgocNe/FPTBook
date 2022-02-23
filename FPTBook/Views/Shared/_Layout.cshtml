@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link rel="stylesheet" href="~/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=ABeeZee&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aclonica&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aldrich&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400|Roboto:300,400,700">
+    <link rel="stylesheet" href="~/assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="~/assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="~/assets/fonts/simple-line-icons.min.css">
+    <link rel="stylesheet" href="~/assets/css/Black-Navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
+    <link rel="stylesheet" href="~/assets/css/Login-Form-Dark.css">
+    <link rel="stylesheet" href="~/assets/css/Ludens-Users---25-After-Register.css">
+    <link rel="stylesheet" href="~/assets/css/Pretty-Registration-Form.css">
+    <link rel="stylesheet" href="~/assets/css/Register-form.css">
+    <link rel="stylesheet" href="~/assets/css/Registration-Form-with-Photo.css">
+    <link rel="stylesheet" href="~/assets/css/vanilla-zoom.min.css">
+
+
+</head>
+<body>
+    <header>
+        <!-- Start: Black-Navbar -->
+        <nav class="navbar navbar-light navbar-expand-md navbar-fixed-top navigation-clean-button" style="background: var(--bs-dark);border-radius: 20;border-top-left-radius: 20;border-top-right-radius: 20;border-bottom-right-radius: 20;border-bottom-left-radius: 20;border-style: none;padding-top: 0;padding-bottom: 10px;margin-top: 0px;min-height: 8px;color: var(--bs-yellow);">
+            <div class="container">
+                <button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1" style="color: var(--bs-yellow);"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon" style="color: var(--bs-yellow);"></span></button>
+                <div><a class="navbar-brand" href="#"><span style="color: var(--bs-yellow);font-family: ABeeZee, sans-serif;font-size: 32px;">Creativarian </span> </a></div>
+                <div class="collapse navbar-collapse" id="navcol-1" style="color: var(--bs-dark);">
+                    @if (Session["username"] != null)
+                    {
+                            <ul class="navbar-nav nav-right">
+                                <li class="nav-item"><a class="nav-link active" style="color: var(--bs-yellow)" @Html.ActionLink("Home", "Index", "Home")</li>
+                                <li class="nav-item"><a class="nav-link" href="about.html" style="color: var(--bs-yellow);">Contact</a></li>
+                                <li class="nav-item"><a class="nav-link active" href="index.html" style="color: var(--bs-yellow);">About us</a></li>
+                            </ul><input type="search" placeholder="search"><i class="fa fa-search" style="font-size: 23px;color: var(--bs-white);margin-left: 12px;"></i>
+                            <p class="ms-auto navbar-text actions" style="text-align: right;">
+                                <a class="login" style="color: rgba(224,217,217,0.9);" @Html.ActionLink($"Hello!{Session["username"]}", "EditInfor","Users")
+                            <a class="btn btn-primary" style="color: rgba(0,0,0,0.9);background: var(--bs-gray-200);border-radius: 10px;border-style: solid;
+                        border-color: rgba(0,0,0,0.9);font-size: 16px;padding: 5px 8px;" @Html.ActionLink("Logout","Logout","Users")
+                            </p>
+                            <ul class="navbar-nav nav-right">
+                                <li class="nav-item dropdown">
+                                    <a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#" style="color: var(--bs-yellow);">Category</a>
+                                    <div class="dropdown-menu"><a class="dropdown-item" href="services.html">Price Packages</a><a class="dropdown-item" href="#">Order Services</a><a class="dropdown-item" href="#">Custom Request</a></div>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#" style="color: var(--bs-yellow);">Management</a>
+                                    <div class="dropdown-menu"><a class="dropdown-item" href="services.html">Price Packages</a><a class="dropdown-item" href="#">Order Services</a><a class="dropdown-item" href="#">Custom Request</a></div>
+                                </li>
+                            </ul><!-- End: Actions -->
+                        
+                   
+
+                    }
+                    else
+                    {
+                        <ul class="navbar-nav nav-right">
+                            <li class="nav-item"><a class="nav-link active" style="color: var(--bs-yellow)" @Html.ActionLink("Home", "Index", "Home")</li>
+                            <li class="nav-item"><a class="nav-link" href="about.html" style="color: var(--bs-yellow);">Contact</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="index.html" style="color: var(--bs-yellow);">About us</a></li>
+                        </ul><input type="search" placeholder="search"><i class="fa fa-search" style="font-size: 23px;color: var(--bs-white);margin-left: 12px;"></i>
+                        <ul class="navbar-nav nav-right">
+
+                            <li class="nav-item dropdown">
+                                <a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#" style="color: var(--bs-yellow);">Category</a>
+                                <div class="dropdown-menu"><a class="dropdown-item" href="services.html" style="background: var(--bs-yellow);">Price Packages</a><a class="dropdown-item" href="#" style="background: var(--bs-yellow);">Order Services</a><a class="dropdown-item" href="#" style="background: var(--bs-yellow);">Custom Request</a></div>
+                            </li>
+                        </ul>
+                        <p class="ms-auto navbar-text actions" style="text-align: right;">
+                            <a class="login" style="color: rgba(224,217,217,0.9);" @Html.ActionLink("Sign in", "Login", "Users")
+                            <a class="btn btn-light action-button" role="button" style="color: rgba(0,0,0,0.9);background: var(--bs-gray-200);border-radius: 10px;border-style: solid;
+                        border-color: rgba(0,0,0,0.9);font-size: 16px;padding: 5px 8px;"@Html.ActionLink("Sign up","Register","Users")
+                        </p><!-- End: Actions -->
+                    }
+
+                </div>
+            </div>
+        </nav><!-- End: Black-Navbar -->
+    </header><!-- Start: Footer Dark -->
+
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer class="page-footer dark" style="background-color:black">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <h5 style="color: var(--bs-white);">FPTBook</h5>
+                        <ul>
+                            <li class="nav-item"><a class="nav-link" href="#" style="color: var(--bs-yellow);">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#" style="color: var(--bs-yellow);">About us</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#" style="color: var(--bs-yellow);">Contact us<br><br></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-3">
+                        <h5 style="color: var(--bs-white);">Acount</h5>
+                        <ul>
+                            <li class="nav-item"><a class="nav-link" href="#" style="color: var(--bs-yellow);">Sign in</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#" style="color: var(--bs-yellow);">Sign up</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#" style="color: var(--bs-yellow);">Account</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-3">
+                        <h5 style="color: var(--bs-white);">Category</h5>
+                        <ul>
+                            <li class="nav-item"><a class="nav-link" href="#" style="color: var(--bs-yellow);">FAQ</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#" style="color: var(--bs-yellow);">Help desk</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#" style="color: var(--bs-yellow);">Forums</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-3">
+                        <h5 style="color: var(--bs-white);">Manage</h5>
+                        <ul>
+                            <li class="nav-item"><a class="nav-link" href="#" style="color: var(--bs-yellow);">Terms of Service</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#" style="color: var(--bs-yellow);">Terms of Use</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#" style="color: var(--bs-yellow);">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p>© 2022 Copyright Text</p>
+            </div>
+        </footer><!-- End: Footer Dark -->
+    </div>
+    <script src="~/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+    <script src="~/assets/js/vanilla-zoom.js"></script>
+    <script src="~/assets/js/theme.js"></script>
+    <script src="https://geodata.solutions/includes/countrystate.js"></script><!-- End: Footer Dark -->
+    <script src="~/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+    <script src="~/assets/js/vanilla-zoom.js"></script>
+    <script src="~/assets/js/theme.js"></script>
+    <script src="https://geodata.solutions/includes/countrystate.js"></script>
+
+</body>
+</html>
