@@ -25,19 +25,36 @@
                 <hr class="sidebar-divider my-0">
                 <ul class="navbar-nav text-light" id="accordionSidebar">
                     <li class="nav-item"><a class="nav-link active" href="index.html"><i class="fas fa-tachometer-alt"></i><span>Management&nbsp;</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="profile.html"><i class="fa fa-caret-square-o-right" style="color: var(--bs-gray-900);"></i><span style="color: var(--bs-gray-900);">Manage Category</span></a><a class="nav-link" href="profile.html"><i class="fa fa-book" style="color: var(--bs-gray-900);"></i><span style="color: var(--bs-gray-900);">Manage Book</span></a><a class="nav-link" href="profile.html"><i class="fa fa-shopping-cart" style="color: var(--bs-gray-900);"></i><span style="color: var(--bs-gray-900);">Manage Orders</span></a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href=@Url.Action("Index","Categories")>
+                            <i class="fa fa-caret-square-o-right" style="color: var(--bs-gray-900);"></i>
+                            <span style="color: var(--bs-gray-900);">Manage Category</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href=@Url.Action("Index","Books")>
+                            <i class="fa fa-book" style="color: var(--bs-gray-900);"></i>
+                            <span style="color: var(--bs-gray-900);">Manage Book</span>
+                        </a>
+                        </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="profile.html">
+                            <i class="fa fa-shopping-cart" style="color: var(--bs-gray-900);"></i>
+                            <span style="color: var(--bs-gray-900);">Manage Orders</span>
+                        </a>
+                    </li>
                     <li class="nav-item"></li>
-                    <li class="nav-item"><a class="nav-link" href="table.html"><i class="fa fa-user" style="color: var(--bs-gray-900);"></i><span style="color: var(--bs-gray-900);">Manage User</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href=@Url.Action("Index","ManageUser")><i class="fa fa-user" style="color: var(--bs-gray-900);"></i><span style="color: var(--bs-gray-900);">Manage User</span></a></li>
                     <li class="nav-item"><a class="nav-link" href="login.html"><i class="far fa-user-circle" style="color: var(--bs-gray-900);"></i><span style="color: var(--bs-gray-900);">Account</span></a></li>
                     <li class="nav-item"><a class="nav-link" href="register.html"><i class="fas fa-user-circle" style="color: var(--bs-gray-900);"></i><span style="color: var(--bs-gray-900);">Logout</span></a></li>
                 </ul>
                 <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0" id="sidebarToggle" type="button" style="color: var(--bs-danger);"></button></div>
             </div>
         </nav>
-    </div>
-    <div class="container body-content">
-        @RenderBody()
+        <div class="container body-content">
+            @RenderBody()
         </div>
+    </div>
         <script src="~/assetsadmin/bootstrap/js/bootstrap.min.js"></script>
         <script src="~/assetsadmin/js/theme.js"></script>
 </body>

@@ -11,112 +11,107 @@ using FPTBook.Models;
 
 namespace FPTBook.Controllers
 {
-    public class OrdersDetailsController : Controller
+    public class ManageUserController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
-        // GET: OrdersDetails
+        // GET: ManageUser
         public ActionResult Index()
         {
-            var ordersDetails = db.OrdersDetails.Include(o => o.Book);
-            return View(ordersDetails.ToList());
+            return View(db.Users.ToList());
         }
 
-        // GET: OrdersDetails/Details/5
-        public ActionResult Details(int? id)
+        // GET: ManageUser/Details/5
+        public ActionResult Details(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            OrdersDetail ordersDetail = db.OrdersDetails.Find(id);
-            if (ordersDetail == null)
+            User user = db.Users.Find(id);
+            if (user == null)
             {
                 return HttpNotFound();
             }
-            return View(ordersDetail);
+            return View(user);
         }
 
-        // GET: OrdersDetails/Create
+        // GET: ManageUser/Create
         public ActionResult Create()
         {
-            ViewBag.bookID = new SelectList(db.Books, "bookID", "bookName");
             return View();
         }
 
-        // POST: OrdersDetails/Create
+        // POST: ManageUser/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ordersdetailID,ordersID,bookID,price,quantity,amount")] OrdersDetail ordersDetail)
+        public ActionResult Create([Bind(Include = "username,password,confirmPassword,fullname,telephone,email,address,gender,birthday,state")] User user)
         {
             if (ModelState.IsValid)
             {
-                db.OrdersDetails.Add(ordersDetail);
+                db.Users.Add(user);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            ViewBag.bookID = new SelectList(db.Books, "bookID", "bookName", ordersDetail.bookID);
-            return View(ordersDetail);
+            return View(user);
         }
 
-        // GET: OrdersDetails/Edit/5
-        public ActionResult Edit(int? id)
+        // GET: ManageUser/Edit/5
+        public ActionResult Edit(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            OrdersDetail ordersDetail = db.OrdersDetails.Find(id);
-            if (ordersDetail == null)
+            User user = db.Users.Find(id);
+            if (user == null)
             {
                 return HttpNotFound();
             }
-            ViewBag.bookID = new SelectList(db.Books, "bookID", "bookName", ordersDetail.bookID);
-            return View(ordersDetail);
+            return View(user);
         }
 
-        // POST: OrdersDetails/Edit/5
+        // POST: ManageUser/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ordersdetailID,ordersID,bookID,price,quantity,amount")] OrdersDetail ordersDetail)
+        public ActionResult Edit([Bind(Include = "username,password,confirmPassword,fullname,telephone,email,address,gender,birthday,state")] User user)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(ordersDetail).State = EntityState.Modified;
+                db.Entry(user).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.bookID = new SelectList(db.Books, "bookID", "bookName", ordersDetail.bookID);
-            return View(ordersDetail);
+            return View(user);
         }
 
-        // GET: OrdersDetails/Delete/5
-        public ActionResult Delete(int? id)
+        // GET: ManageUser/Delete/5
+        public ActionResult Delete(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            OrdersDetail ordersDetail = db.OrdersDetails.Find(id);
-            if (ordersDetail == null)
+            User user = db.Users.Find(id);
+            if (user == null)
             {
                 return HttpNotFound();
             }
-            return View(ordersDetail);
+            return View(user);
         }
 
-        // POST: OrdersDetails/Delete/5
+        // POST: ManageUser/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int id)
+        public ActionResult DeleteConfirmed(string id)
         {
-            OrdersDetail ordersDetail = db.OrdersDetails.Find(id);
-            db.OrdersDetails.Remove(ordersDetail);
+            User user = db.Users.Find(id);
+            db.Users.Remove(user);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

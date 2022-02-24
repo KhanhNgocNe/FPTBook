@@ -35,46 +35,29 @@
                 <button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1" style="color: var(--bs-yellow);"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon" style="color: var(--bs-yellow);"></span></button>
                 <div><a class="navbar-brand" href="#"><span style="color: var(--bs-yellow);font-family: ABeeZee, sans-serif;font-size: 32px;">Creativarian </span> </a></div>
                 <div class="collapse navbar-collapse" id="navcol-1" style="color: var(--bs-dark);">
+                    <ul class="navbar-nav nav-right">
+                        <li class="nav-item"><a class="nav-link active" style="color: var(--bs-yellow)" @Html.ActionLink("Home", "Index", "Home")</li>
+                        <li class="nav-item"><a class="nav-link" href="about.html" style="color: var(--bs-yellow);">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="index.html" style="color: var(--bs-yellow);">About us</a></li>
+                    </ul><input type="search" placeholder="search"><i class="fa fa-search" style="font-size: 23px;color: var(--bs-white);margin-left: 12px;"></i>
+                    <ul class="navbar-nav nav-right">
+
+                        <li class="nav-item dropdown">
+                            <a aria-expanded="false" data-bs-toggle="dropdown" class="dropdown-toggle nav-link" href="#" style="color: var(--bs-yellow);">Category</a>
+                            <div class="dropdown-menu"><a class="dropdown-item" href="services.html" style="background: var(--bs-yellow);">Price Packages</a><a class="dropdown-item" href="#" style="background: var(--bs-yellow);">Order Services</a><a class="dropdown-item" href="#" style="background: var(--bs-yellow);">Custom Request</a></div>
+                        </li>
+                    </ul>
+
                     @if (Session["username"] != null)
                     {
-                        <ul class="navbar-nav nav-right">
-                            <li class="nav-item"><a class="nav-link active" style="color: var(--bs-yellow)" @Html.ActionLink("Home", "Index", "Home")</li>
-                            <li class="nav-item"><a class="nav-link" href="about.html" style="color: var(--bs-yellow);">Contact</a></li>
-                            <li class="nav-item"><a class="nav-link active" href="index.html" style="color: var(--bs-yellow);">About us</a></li>
-                        </ul><input type="search" placeholder="search"><i class="fa fa-search" style="font-size: 23px;color: var(--bs-white);margin-left: 12px;"></i>
                         <p class="ms-auto navbar-text actions" style="text-align: right;">
                             <a class="login" style="color: rgba(224,217,217,0.9);" @Html.ActionLink($"Hello!{Session["username"]}", "EditInfor", "Users")
                             <a class="btn btn-primary" style="color: rgba(0,0,0,0.9);background: var(--bs-gray-200);border-radius: 10px;border-style: solid;
                         border-color: rgba(0,0,0,0.9);font-size: 16px;padding: 5px 8px;" @Html.ActionLink("Logout","Logout","Users")
                         </p>
-                        <ul class="navbar-nav nav-right">
-                            <li class="nav-item dropdown">
-                                <a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#" style="color: var(--bs-yellow);">Category</a>
-                                <div class="dropdown-menu"><a class="dropdown-item" href="services.html">Price Packages</a><a class="dropdown-item" href="#">Order Services</a><a class="dropdown-item" href="#">Custom Request</a></div>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#" style="color: var(--bs-yellow);">Management</a>
-                                <div class="dropdown-menu"><a class="dropdown-item" href="services.html">Price Packages</a><a class="dropdown-item" href="#">Order Services</a><a class="dropdown-item" href="#">Custom Request</a></div>
-                            </li>
-                        </ul><!-- End: Actions -->
-
-
-
                     }
                     else
                     {
-                        <ul class="navbar-nav nav-right">
-                            <li class="nav-item"><a class="nav-link active" style="color: var(--bs-yellow)" @Html.ActionLink("Home", "Index", "Home")</li>
-                            <li class="nav-item"><a class="nav-link" href="about.html" style="color: var(--bs-yellow);">Contact</a></li>
-                            <li class="nav-item"><a class="nav-link active" href="index.html" style="color: var(--bs-yellow);">About us</a></li>
-                        </ul><input type="search" placeholder="search"><i class="fa fa-search" style="font-size: 23px;color: var(--bs-white);margin-left: 12px;"></i>
-                        <ul class="navbar-nav nav-right">
-
-                            <li class="nav-item dropdown">
-                                <a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#" style="color: var(--bs-yellow);">Category</a>
-                                <div class="dropdown-menu"><a class="dropdown-item" href="services.html" style="background: var(--bs-yellow);">Price Packages</a><a class="dropdown-item" href="#" style="background: var(--bs-yellow);">Order Services</a><a class="dropdown-item" href="#" style="background: var(--bs-yellow);">Custom Request</a></div>
-                            </li>
-                        </ul>
                         <p class="ms-auto navbar-text actions" style="text-align: right;">
                             <a class="login" style="color: rgba(224,217,217,0.9);" @Html.ActionLink("Sign in", "Login", "Users")
                             <a class="btn btn-light action-button" role="button" style="color: rgba(0,0,0,0.9);background: var(--bs-gray-200);border-radius: 10px;border-style: solid;

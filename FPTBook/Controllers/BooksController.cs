@@ -49,7 +49,7 @@ namespace FPTBook.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "bookID,bookName,description,quantity,price,categoryID")] Book book)
+        public ActionResult Create([Bind(Include = "bookID,bookName,description,stock_quantity,price,categoryID")] Book book)
         {
             if (ModelState.IsValid)
             {
@@ -83,7 +83,7 @@ namespace FPTBook.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "bookID,bookName,description,quantity,price,categoryID")] Book book)
+        public ActionResult Edit([Bind(Include = "bookID,bookName,description,stock_quantity,price,categoryID")] Book book)
         {
             if (ModelState.IsValid)
             {

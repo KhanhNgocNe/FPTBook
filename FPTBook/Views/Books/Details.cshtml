@@ -2,6 +2,7 @@
 
 @{
     ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
 
 <h2>Details</h2>
@@ -35,11 +36,11 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.quantity)
+            @Html.DisplayNameFor(model => model.stock_quantity)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.quantity)
+            @Html.DisplayFor(model => model.stock_quantity)
         </dd>
 
         <dt>
