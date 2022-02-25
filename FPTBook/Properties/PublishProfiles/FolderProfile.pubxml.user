@@ -5,221 +5,242 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <_PublishTargetUrl>C:\mywebsite</_PublishTargetUrl>
-    <History>True|2022-02-24T04:22:58.2317195Z;</History>
+    <History>True|2022-02-25T00:32:51.7858400Z;True|2022-02-24T11:22:58.2317195+07:00;</History>
   </PropertyGroup>
   <ItemGroup>
     <File Include="assets/bootstrap/css/bootstrap.min.css">
-      <publishTime>02/23/2022 20:14:27</publishTime>
+      <publishTime>02/24/2022 20:00:46</publishTime>
     </File>
     <File Include="assets/bootstrap/js/bootstrap.min.js">
-      <publishTime>02/23/2022 20:14:27</publishTime>
+      <publishTime>02/24/2022 20:00:46</publishTime>
     </File>
     <File Include="assets/css/Black-Navbar.css">
-      <publishTime>02/23/2022 20:14:27</publishTime>
+      <publishTime>02/24/2022 20:00:46</publishTime>
     </File>
     <File Include="assets/css/Login-Form-Dark.css">
-      <publishTime>02/23/2022 20:14:27</publishTime>
+      <publishTime>02/24/2022 20:00:46</publishTime>
     </File>
     <File Include="assets/css/Ludens-Users---25-After-Register.css">
-      <publishTime>02/23/2022 20:14:27</publishTime>
+      <publishTime>02/24/2022 20:00:46</publishTime>
     </File>
     <File Include="assets/css/Pretty-Registration-Form.css">
-      <publishTime>02/23/2022 20:14:27</publishTime>
+      <publishTime>02/24/2022 20:00:46</publishTime>
     </File>
     <File Include="assets/css/Register-form.css">
-      <publishTime>02/23/2022 20:14:27</publishTime>
+      <publishTime>02/24/2022 20:00:46</publishTime>
     </File>
     <File Include="assets/css/Registration-Form-with-Photo.css">
-      <publishTime>02/23/2022 20:14:27</publishTime>
+      <publishTime>02/24/2022 20:00:46</publishTime>
     </File>
     <File Include="assets/css/untitled.css">
-      <publishTime>02/23/2022 20:14:27</publishTime>
+      <publishTime>02/24/2022 20:00:46</publishTime>
     </File>
     <File Include="assets/css/vanilla-zoom.min.css">
-      <publishTime>02/23/2022 20:14:27</publishTime>
+      <publishTime>02/24/2022 20:00:46</publishTime>
     </File>
     <File Include="assets/fonts/fa-brands-400.eot">
-      <publishTime>02/23/2022 20:14:27</publishTime>
+      <publishTime>02/24/2022 20:00:46</publishTime>
     </File>
     <File Include="assets/fonts/fa-brands-400.svg">
-      <publishTime>02/23/2022 20:14:27</publishTime>
+      <publishTime>02/24/2022 20:00:46</publishTime>
     </File>
     <File Include="assets/fonts/fa-brands-400.ttf">
-      <publishTime>02/23/2022 20:14:27</publishTime>
+      <publishTime>02/24/2022 20:00:46</publishTime>
     </File>
     <File Include="assets/fonts/fa-brands-400.woff">
-      <publishTime>02/23/2022 20:14:27</publishTime>
+      <publishTime>02/24/2022 20:00:46</publishTime>
     </File>
     <File Include="assets/fonts/fa-brands-400.woff2">
-      <publishTime>02/23/2022 20:14:27</publishTime>
+      <publishTime>02/24/2022 20:00:46</publishTime>
     </File>
     <File Include="assets/fonts/fa-regular-400.eot">
-      <publishTime>02/23/2022 20:14:27</publishTime>
+      <publishTime>02/24/2022 20:00:46</publishTime>
     </File>
     <File Include="assets/fonts/fa-regular-400.svg">
-      <publishTime>02/23/2022 20:14:27</publishTime>
+      <publishTime>02/24/2022 20:00:46</publishTime>
     </File>
     <File Include="assets/fonts/fa-regular-400.ttf">
-      <publishTime>02/23/2022 20:14:27</publishTime>
+      <publishTime>02/24/2022 20:00:46</publishTime>
     </File>
     <File Include="assets/fonts/fa-regular-400.woff">
-      <publishTime>02/23/2022 20:14:27</publishTime>
+      <publishTime>02/24/2022 20:00:46</publishTime>
     </File>
     <File Include="assets/fonts/fa-regular-400.woff2">
-      <publishTime>02/23/2022 20:14:27</publishTime>
+      <publishTime>02/24/2022 20:00:46</publishTime>
     </File>
     <File Include="assets/fonts/fa-solid-900.eot">
-      <publishTime>02/23/2022 20:14:27</publishTime>
+      <publishTime>02/24/2022 20:00:46</publishTime>
     </File>
     <File Include="assets/fonts/fa-solid-900.svg">
-      <publishTime>02/23/2022 20:14:27</publishTime>
+      <publishTime>02/24/2022 20:00:46</publishTime>
     </File>
     <File Include="assets/fonts/fa-solid-900.ttf">
-      <publishTime>02/23/2022 20:14:27</publishTime>
+      <publishTime>02/24/2022 20:00:46</publishTime>
     </File>
     <File Include="assets/fonts/fa-solid-900.woff">
-      <publishTime>02/23/2022 20:14:27</publishTime>
+      <publishTime>02/24/2022 20:00:46</publishTime>
     </File>
     <File Include="assets/fonts/fa-solid-900.woff2">
-      <publishTime>02/23/2022 20:14:27</publishTime>
+      <publishTime>02/24/2022 20:00:46</publishTime>
     </File>
     <File Include="assets/fonts/font-awesome.min.css">
-      <publishTime>02/23/2022 20:14:27</publishTime>
+      <publishTime>02/24/2022 20:00:46</publishTime>
     </File>
     <File Include="assets/fonts/fontawesome-all.min.css">
-      <publishTime>02/23/2022 20:14:27</publishTime>
+      <publishTime>02/24/2022 20:00:46</publishTime>
     </File>
     <File Include="assets/fonts/fontawesome-webfont.eot">
-      <publishTime>02/23/2022 20:14:27</publishTime>
+      <publishTime>02/24/2022 20:00:46</publishTime>
     </File>
     <File Include="assets/fonts/fontawesome-webfont.svg">
-      <publishTime>02/23/2022 20:14:27</publishTime>
+      <publishTime>02/24/2022 20:00:46</publishTime>
     </File>
     <File Include="assets/fonts/fontawesome-webfont.ttf">
-      <publishTime>02/23/2022 20:14:27</publishTime>
+      <publishTime>02/24/2022 20:00:46</publishTime>
     </File>
     <File Include="assets/fonts/fontawesome-webfont.woff">
-      <publishTime>02/23/2022 20:14:27</publishTime>
+      <publishTime>02/24/2022 20:00:46</publishTime>
     </File>
     <File Include="assets/fonts/fontawesome-webfont.woff2">
-      <publishTime>02/23/2022 20:14:27</publishTime>
+      <publishTime>02/24/2022 20:00:46</publishTime>
     </File>
     <File Include="assets/fonts/FontAwesome.otf">
-      <publishTime>02/23/2022 20:14:27</publishTime>
+      <publishTime>02/24/2022 20:00:46</publishTime>
     </File>
     <File Include="assets/fonts/fontawesome5-overrides.min.css">
-      <publishTime>02/23/2022 20:14:27</publishTime>
+      <publishTime>02/24/2022 20:00:46</publishTime>
     </File>
     <File Include="assets/fonts/ionicons.eot">
-      <publishTime>02/23/2022 20:14:27</publishTime>
+      <publishTime>02/24/2022 20:00:46</publishTime>
     </File>
     <File Include="assets/fonts/ionicons.min.css">
-      <publishTime>02/23/2022 20:14:27</publishTime>
+      <publishTime>02/24/2022 20:00:46</publishTime>
     </File>
     <File Include="assets/fonts/ionicons.svg">
-      <publishTime>02/23/2022 20:14:27</publishTime>
+      <publishTime>02/24/2022 20:00:46</publishTime>
     </File>
     <File Include="assets/fonts/ionicons.ttf">
-      <publishTime>02/23/2022 20:14:27</publishTime>
+      <publishTime>02/24/2022 20:00:46</publishTime>
     </File>
     <File Include="assets/fonts/ionicons.woff">
-      <publishTime>02/23/2022 20:14:27</publishTime>
+      <publishTime>02/24/2022 20:00:46</publishTime>
     </File>
     <File Include="assets/fonts/Simple-Line-Icons.eot">
-      <publishTime>02/23/2022 20:14:27</publishTime>
+      <publishTime>02/24/2022 20:00:46</publishTime>
     </File>
     <File Include="assets/fonts/simple-line-icons.min.css">
-      <publishTime>02/23/2022 20:14:27</publishTime>
+      <publishTime>02/24/2022 20:00:46</publishTime>
     </File>
     <File Include="assets/fonts/Simple-Line-Icons.svg">
-      <publishTime>02/23/2022 20:14:27</publishTime>
+      <publishTime>02/24/2022 20:00:46</publishTime>
     </File>
     <File Include="assets/fonts/Simple-Line-Icons.ttf">
-      <publishTime>02/23/2022 20:14:27</publishTime>
+      <publishTime>02/24/2022 20:00:46</publishTime>
     </File>
     <File Include="assets/fonts/Simple-Line-Icons.woff">
-      <publishTime>02/23/2022 20:14:27</publishTime>
+      <publishTime>02/24/2022 20:00:46</publishTime>
     </File>
     <File Include="assets/fonts/Simple-Line-Icons.woff2">
-      <publishTime>02/23/2022 20:14:27</publishTime>
+      <publishTime>02/24/2022 20:00:46</publishTime>
     </File>
     <File Include="assets/img/755e3a5d6ebea2e0fbaf.jpg">
-      <publishTime>02/23/2022 20:14:27</publishTime>
+      <publishTime>02/24/2022 20:00:46</publishTime>
+    </File>
+    <File Include="assets/img/author/a1.jpg">
+      <publishTime>02/24/2022 20:00:46</publishTime>
+    </File>
+    <File Include="assets/img/author/a2.jpg">
+      <publishTime>02/24/2022 20:00:46</publishTime>
+    </File>
+    <File Include="assets/img/author/a3.jpg">
+      <publishTime>02/24/2022 20:00:46</publishTime>
+    </File>
+    <File Include="assets/img/author/c3.jpg">
+      <publishTime>02/24/2022 20:00:46</publishTime>
     </File>
     <File Include="assets/img/avatars/avatar1.jpeg">
-      <publishTime>02/23/2022 20:14:27</publishTime>
+      <publishTime>02/24/2022 20:00:46</publishTime>
     </File>
     <File Include="assets/img/avatars/avatar1.jpg">
-      <publishTime>02/23/2022 20:14:27</publishTime>
+      <publishTime>02/24/2022 20:00:46</publishTime>
     </File>
     <File Include="assets/img/avatars/avatar2.jpeg">
-      <publishTime>02/23/2022 20:14:27</publishTime>
+      <publishTime>02/24/2022 20:00:46</publishTime>
     </File>
     <File Include="assets/img/avatars/avatar2.jpg">
-      <publishTime>02/23/2022 20:14:27</publishTime>
+      <publishTime>02/24/2022 20:00:46</publishTime>
     </File>
     <File Include="assets/img/avatars/avatar3.jpeg">
-      <publishTime>02/23/2022 20:14:27</publishTime>
+      <publishTime>02/24/2022 20:00:46</publishTime>
     </File>
     <File Include="assets/img/avatars/avatar3.jpg">
-      <publishTime>02/23/2022 20:14:27</publishTime>
+      <publishTime>02/24/2022 20:00:46</publishTime>
     </File>
     <File Include="assets/img/avatars/avatar4.jpeg">
-      <publishTime>02/23/2022 20:14:27</publishTime>
+      <publishTime>02/24/2022 20:00:46</publishTime>
     </File>
     <File Include="assets/img/avatars/avatar5.jpeg">
-      <publishTime>02/23/2022 20:14:27</publishTime>
+      <publishTime>02/24/2022 20:00:46</publishTime>
+    </File>
+    <File Include="assets/img/book cover/c1.jpg">
+      <publishTime>02/24/2022 20:00:46</publishTime>
+    </File>
+    <File Include="assets/img/book cover/c2.jpg">
+      <publishTime>02/24/2022 20:00:46</publishTime>
+    </File>
+    <File Include="assets/img/book cover/c3.jpg">
+      <publishTime>02/24/2022 20:00:46</publishTime>
     </File>
     <File Include="assets/img/dogs/image2.jpeg">
-      <publishTime>02/23/2022 20:14:27</publishTime>
+      <publishTime>02/24/2022 20:00:46</publishTime>
     </File>
     <File Include="assets/img/dogs/image3.jpeg">
-      <publishTime>02/23/2022 20:14:27</publishTime>
+      <publishTime>02/24/2022 20:00:46</publishTime>
     </File>
     <File Include="assets/img/IINET-DOSAGE-1.jpg">
-      <publishTime>02/23/2022 20:14:27</publishTime>
+      <publishTime>02/24/2022 20:00:46</publishTime>
     </File>
     <File Include="assets/img/meeting.jpg">
-      <publishTime>02/23/2022 20:14:27</publishTime>
+      <publishTime>02/24/2022 20:00:46</publishTime>
     </File>
     <File Include="assets/img/scenery/image1.jpg">
-      <publishTime>02/23/2022 20:14:27</publishTime>
+      <publishTime>02/24/2022 20:00:46</publishTime>
     </File>
     <File Include="assets/img/scenery/image4.jpg">
-      <publishTime>02/23/2022 20:14:27</publishTime>
+      <publishTime>02/24/2022 20:00:46</publishTime>
     </File>
     <File Include="assets/img/scenery/image5.jpg">
-      <publishTime>02/23/2022 20:14:27</publishTime>
+      <publishTime>02/24/2022 20:00:46</publishTime>
     </File>
     <File Include="assets/img/scenery/image6.jpg">
-      <publishTime>02/23/2022 20:14:27</publishTime>
+      <publishTime>02/24/2022 20:00:46</publishTime>
     </File>
     <File Include="assets/img/star-sky.jpg">
-      <publishTime>02/23/2022 20:14:27</publishTime>
+      <publishTime>02/24/2022 20:00:46</publishTime>
     </File>
     <File Include="assets/img/tech/3db5bbc3ef20237e7a31.jpg">
-      <publishTime>02/23/2022 20:14:27</publishTime>
+      <publishTime>02/24/2022 20:00:46</publishTime>
     </File>
     <File Include="assets/img/tech/51f43c9f687ca422fd6d.jpg">
-      <publishTime>02/23/2022 20:14:27</publishTime>
+      <publishTime>02/24/2022 20:00:47</publishTime>
     </File>
     <File Include="assets/img/tech/6782a2fcf61f3a41630e.jpg">
-      <publishTime>02/23/2022 20:14:27</publishTime>
+      <publishTime>02/24/2022 20:00:47</publishTime>
     </File>
     <File Include="assets/img/tech/755e3a5d6ebea2e0fbaf.jpg">
-      <publishTime>02/23/2022 20:14:27</publishTime>
+      <publishTime>02/24/2022 20:00:47</publishTime>
     </File>
     <File Include="assets/img/tech/d8469951cdb201ec58a3.jpg">
-      <publishTime>02/23/2022 20:14:27</publishTime>
+      <publishTime>02/24/2022 20:00:47</publishTime>
     </File>
     <File Include="assets/img/tech/image4.jpg">
-      <publishTime>02/23/2022 20:14:27</publishTime>
+      <publishTime>02/24/2022 20:00:47</publishTime>
     </File>
     <File Include="assets/js/theme.js">
-      <publishTime>02/23/2022 20:14:27</publishTime>
+      <publishTime>02/24/2022 20:00:47</publishTime>
     </File>
     <File Include="assets/js/vanilla-zoom.js">
-      <publishTime>02/23/2022 20:14:27</publishTime>
+      <publishTime>02/24/2022 20:00:47</publishTime>
     </File>
     <File Include="assetsadmin/bootstrap/css/bootstrap.min.css">
       <publishTime>02/22/2022 23:56:19</publishTime>
@@ -339,10 +360,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>03/02/2015 16:32:26</publishTime>
     </File>
     <File Include="bin/FPTBook.dll">
-      <publishTime>02/24/2022 11:22:57</publishTime>
+      <publishTime>02/25/2022 07:32:50</publishTime>
     </File>
     <File Include="bin/FPTBook.pdb">
-      <publishTime>02/24/2022 11:22:57</publishTime>
+      <publishTime>02/25/2022 07:32:50</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.Identity.Core.dll">
       <publishTime>11/25/2019 10:57:50</publishTime>
@@ -654,34 +675,34 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>02/23/2022 00:23:28</publishTime>
     </File>
     <File Include="Views/Books/Create.cshtml">
-      <publishTime>02/17/2022 13:03:32</publishTime>
+      <publishTime>02/24/2022 13:24:49</publishTime>
     </File>
     <File Include="Views/Books/Delete.cshtml">
-      <publishTime>02/17/2022 13:03:33</publishTime>
+      <publishTime>02/24/2022 13:24:50</publishTime>
     </File>
     <File Include="Views/Books/Details.cshtml">
-      <publishTime>02/17/2022 13:03:37</publishTime>
+      <publishTime>02/24/2022 13:24:50</publishTime>
     </File>
     <File Include="Views/Books/Edit.cshtml">
-      <publishTime>02/17/2022 13:03:38</publishTime>
+      <publishTime>02/24/2022 13:24:51</publishTime>
     </File>
     <File Include="Views/Books/Index.cshtml">
-      <publishTime>02/17/2022 13:03:39</publishTime>
+      <publishTime>02/24/2022 13:24:51</publishTime>
     </File>
     <File Include="Views/Categories/Create.cshtml">
-      <publishTime>02/17/2022 13:02:54</publishTime>
+      <publishTime>02/24/2022 12:45:31</publishTime>
     </File>
     <File Include="Views/Categories/Delete.cshtml">
-      <publishTime>02/17/2022 13:02:55</publishTime>
+      <publishTime>02/24/2022 12:45:31</publishTime>
     </File>
     <File Include="Views/Categories/Details.cshtml">
-      <publishTime>02/17/2022 13:02:55</publishTime>
+      <publishTime>02/24/2022 12:45:32</publishTime>
     </File>
     <File Include="Views/Categories/Edit.cshtml">
-      <publishTime>02/17/2022 13:02:56</publishTime>
+      <publishTime>02/24/2022 12:45:32</publishTime>
     </File>
     <File Include="Views/Categories/Index.cshtml">
-      <publishTime>02/17/2022 13:02:56</publishTime>
+      <publishTime>02/24/2022 12:45:33</publishTime>
     </File>
     <File Include="Views/Home/About.cshtml">
       <publishTime>02/17/2022 11:58:33</publishTime>
@@ -690,7 +711,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>02/17/2022 11:58:33</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>02/23/2022 20:18:36</publishTime>
+      <publishTime>02/24/2022 20:29:27</publishTime>
     </File>
     <File Include="Views/Manage/AddPhoneNumber.cshtml">
       <publishTime>02/17/2022 11:58:49</publishTime>
@@ -709,6 +730,21 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     </File>
     <File Include="Views/Manage/VerifyPhoneNumber.cshtml">
       <publishTime>02/17/2022 11:58:49</publishTime>
+    </File>
+    <File Include="Views/ManageUser/Create.cshtml">
+      <publishTime>02/24/2022 13:08:10</publishTime>
+    </File>
+    <File Include="Views/ManageUser/Delete.cshtml">
+      <publishTime>02/24/2022 13:08:11</publishTime>
+    </File>
+    <File Include="Views/ManageUser/Details.cshtml">
+      <publishTime>02/24/2022 13:08:11</publishTime>
+    </File>
+    <File Include="Views/ManageUser/Edit.cshtml">
+      <publishTime>02/24/2022 13:08:12</publishTime>
+    </File>
+    <File Include="Views/ManageUser/Index.cshtml">
+      <publishTime>02/24/2022 13:08:12</publishTime>
     </File>
     <File Include="Views/Orders/Create.cshtml">
       <publishTime>02/20/2022 17:53:08</publishTime>
@@ -747,10 +783,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>02/17/2022 11:58:49</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>02/23/2022 21:28:30</publishTime>
+      <publishTime>02/24/2022 12:24:26</publishTime>
     </File>
     <File Include="Views/Shared/_LayoutAdmin.cshtml">
-      <publishTime>02/23/2022 00:03:49</publishTime>
+      <publishTime>02/24/2022 13:27:47</publishTime>
     </File>
     <File Include="Views/Shared/_LoginPartial.cshtml">
       <publishTime>02/17/2022 11:58:49</publishTime>

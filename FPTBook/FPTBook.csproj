@@ -229,6 +229,10 @@
     <Content Include="assets\fonts\simple-line-icons.min.css" />
     <Content Include="assets\fonts\Simple-Line-Icons.svg" />
     <Content Include="assets\img\755e3a5d6ebea2e0fbaf.jpg" />
+    <Content Include="assets\img\author\a1.jpg" />
+    <Content Include="assets\img\author\a2.jpg" />
+    <Content Include="assets\img\author\a3.jpg" />
+    <Content Include="assets\img\author\c3.jpg" />
     <Content Include="assets\img\avatars\avatar1.jpeg" />
     <Content Include="assets\img\avatars\avatar1.jpg" />
     <Content Include="assets\img\avatars\avatar2.jpeg" />
@@ -237,6 +241,9 @@
     <Content Include="assets\img\avatars\avatar3.jpg" />
     <Content Include="assets\img\avatars\avatar4.jpeg" />
     <Content Include="assets\img\avatars\avatar5.jpeg" />
+    <Content Include="assets\img\book cover\c1.jpg" />
+    <Content Include="assets\img\book cover\c2.jpg" />
+    <Content Include="assets\img\book cover\c3.jpg" />
     <Content Include="assets\img\dogs\image2.jpeg" />
     <Content Include="assets\img\dogs\image3.jpeg" />
     <Content Include="assets\img\IINET-DOSAGE-1.jpg" />
