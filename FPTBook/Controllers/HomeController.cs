@@ -1,4 +1,6 @@
-﻿using System;
+﻿using FPTBook.DB;
+using FPTBook.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,9 +10,23 @@ namespace FPTBook.Controllers
 {
     public class HomeController : Controller
     {
+        private ApplicationDbContext db = new ApplicationDbContext();
         public ActionResult Index()
         {
-            return View();
+            var books = db.Books.ToList();
+            return View(books);
+        }
+        [HttpPost]
+        public ActionResult Index(string searchstring)
+        {
+            Session["Admin"] = null;
+            List<Book> data = new List<Book>();
+            data = db.Books.Where(x => x.bookName.Contains(searchstring)).ToList();
+            if (data == null)
+            {
+                return RedirectToAction("Index");
+            }
+            return View(data);
         }
 
         public ActionResult About()

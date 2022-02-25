@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Web;
@@ -49,9 +50,16 @@ namespace FPTBook.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "bookID,bookName,description,stock_quantity,price,categoryID")] Book book)
+        public ActionResult Create([Bind(Include = "bookID,bookName,description,Img,stock_quantity,price,categoryID")] Book book, HttpPostedFileBase file)
         {
-            if (ModelState.IsValid)
+            string pic = System.IO.Path.GetFileName(file.FileName);
+            if (file != null)
+            {
+                string path = Path.Combine(Server.MapPath("~/assets/img"), Path.GetFileName(file.FileName));
+                file.SaveAs(path);
+                book.Img = pic.ToString();
+            }
+            if (true)
             {
                 db.Books.Add(book);
                 db.SaveChanges();
