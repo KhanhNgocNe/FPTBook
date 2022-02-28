@@ -5,7 +5,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <_PublishTargetUrl>C:\mywebsite</_PublishTargetUrl>
-    <History>True|2022-02-25T03:04:48.8565308Z;True|2022-02-25T10:02:51.8533810+07:00;True|2022-02-25T08:28:07.4388160+07:00;True|2022-02-25T07:32:51.7858400+07:00;True|2022-02-24T11:22:58.2317195+07:00;</History>
+    <History>True|2022-02-28T14:32:38.5749387Z;True|2022-02-28T21:32:26.4905464+07:00;False|2022-02-25T23:08:45.5212360+07:00;True|2022-02-25T10:04:48.8565308+07:00;True|2022-02-25T10:02:51.8533810+07:00;True|2022-02-25T08:28:07.4388160+07:00;True|2022-02-25T07:32:51.7858400+07:00;True|2022-02-24T11:22:58.2317195+07:00;</History>
   </PropertyGroup>
   <ItemGroup>
     <File Include="assets/bootstrap/css/bootstrap.min.css">
@@ -25,6 +25,12 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     </File>
     <File Include="assets/css/Pretty-Registration-Form.css">
       <publishTime>02/24/2022 20:00:46</publishTime>
+    </File>
+    <File Include="assets/css/Product - Detail.css">
+      <publishTime>02/28/2022 14:55:23</publishTime>
+    </File>
+    <File Include="assets/css/Product.css">
+      <publishTime>02/26/2022 13:50:24</publishTime>
     </File>
     <File Include="assets/css/Register-form.css">
       <publishTime>02/24/2022 20:00:46</publishTime>
@@ -145,6 +151,9 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     </File>
     <File Include="assets/img/755e3a5d6ebea2e0fbaf.jpg">
       <publishTime>02/24/2022 20:00:46</publishTime>
+    </File>
+    <File Include="assets/img/a3.jpg">
+      <publishTime>02/28/2022 21:04:31</publishTime>
     </File>
     <File Include="assets/img/author/a1.jpg">
       <publishTime>02/24/2022 20:00:46</publishTime>
@@ -360,10 +369,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>03/02/2015 16:32:26</publishTime>
     </File>
     <File Include="bin/FPTBook.dll">
-      <publishTime>02/25/2022 10:04:48</publishTime>
+      <publishTime>02/28/2022 21:32:25</publishTime>
     </File>
     <File Include="bin/FPTBook.pdb">
-      <publishTime>02/25/2022 10:04:48</publishTime>
+      <publishTime>02/28/2022 21:32:25</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.Identity.Core.dll">
       <publishTime>11/25/2019 10:57:50</publishTime>
@@ -675,19 +684,19 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>02/23/2022 00:23:28</publishTime>
     </File>
     <File Include="Views/Books/Create.cshtml">
-      <publishTime>02/25/2022 09:23:03</publishTime>
+      <publishTime>02/28/2022 15:37:36</publishTime>
     </File>
     <File Include="Views/Books/Delete.cshtml">
       <publishTime>02/24/2022 13:24:50</publishTime>
     </File>
     <File Include="Views/Books/Details.cshtml">
-      <publishTime>02/24/2022 13:24:50</publishTime>
+      <publishTime>02/28/2022 15:44:10</publishTime>
     </File>
     <File Include="Views/Books/Edit.cshtml">
-      <publishTime>02/25/2022 10:04:41</publishTime>
+      <publishTime>02/28/2022 13:13:23</publishTime>
     </File>
     <File Include="Views/Books/Index.cshtml">
-      <publishTime>02/24/2022 13:24:51</publishTime>
+      <publishTime>02/28/2022 12:15:53</publishTime>
     </File>
     <File Include="Views/Categories/Create.cshtml">
       <publishTime>02/24/2022 12:45:31</publishTime>
@@ -702,7 +711,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>02/24/2022 12:45:32</publishTime>
     </File>
     <File Include="Views/Categories/Index.cshtml">
-      <publishTime>02/24/2022 12:45:33</publishTime>
+      <publishTime>02/28/2022 13:49:05</publishTime>
     </File>
     <File Include="Views/Home/About.cshtml">
       <publishTime>02/17/2022 11:58:33</publishTime>
@@ -711,7 +720,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>02/17/2022 11:58:33</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>02/24/2022 20:29:27</publishTime>
+      <publishTime>02/28/2022 12:11:19</publishTime>
     </File>
     <File Include="Views/Manage/AddPhoneNumber.cshtml">
       <publishTime>02/17/2022 11:58:49</publishTime>
@@ -744,7 +753,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>02/24/2022 13:08:12</publishTime>
     </File>
     <File Include="Views/ManageUser/Index.cshtml">
-      <publishTime>02/24/2022 13:08:12</publishTime>
+      <publishTime>02/25/2022 22:51:05</publishTime>
     </File>
     <File Include="Views/Orders/Create.cshtml">
       <publishTime>02/20/2022 17:53:08</publishTime>
@@ -783,10 +792,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>02/17/2022 11:58:49</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>02/25/2022 08:37:20</publishTime>
+      <publishTime>02/28/2022 14:48:53</publishTime>
     </File>
     <File Include="Views/Shared/_LayoutAdmin.cshtml">
-      <publishTime>02/24/2022 13:27:47</publishTime>
+      <publishTime>02/25/2022 22:57:24</publishTime>
     </File>
     <File Include="Views/Shared/_LoginPartial.cshtml">
       <publishTime>02/17/2022 11:58:49</publishTime>

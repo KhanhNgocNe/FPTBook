@@ -18,17 +18,22 @@
                 <div class="row align-items-center">
                     @foreach (var item in Model)
                     {
-                        <div class="col-md-6"><img class="img-thumbnail" style="width:500px; height:300px" src="~/assets/img/@item.Img"></div>
-                        <div class="col-md-6">
-                            <h3>Lorem impsum dolor sit amet</h3>
-                            <div class="getting-started-info">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <div class="col-sm-3">
+                        <div class='container-fluid'>
+                            <div class="card mx-auto col-md-3 col-10 mt-5">
+                                <img class='mx-auto img-thumbnail' src="~/assets/img/@item.Img" width="500" height="300" />
+                                <div class="card-body text-center mx-auto">
+                                    <div class='cvp'>
+                                        <h5 class="card-title font-weight-bold">@item.bookName</h5>
+                                        <p class="card-text"> $@item.price </p> <a href="#" class="btn details px-auto">view details</a><br /> <a href="#" class="btn cart px-auto">ADD TO CART</a>
+                                    </div>
+                                </div>
                             </div>
-                            <button class="btn btn-outline-primary btn-lg" type="button" style="background: var(--bs-yellow);border-color: var(--bs-gray-900);color: var(--bs-gray-900);">Buy Now</button>
-                            <button class="btn btn-outline-primary btn-lg" type="button" style="background: var(--bs-gray-900); border-color: var(--bs-gray-900); color: var(--bs-yellow); ">Details...</button>
                         </div>
+                    </div>
+
                     }
-                </div>
+                    </div>
             </div>
         </section>
 

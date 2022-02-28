@@ -21,6 +21,7 @@ namespace FPTBook.Models
         [Required(ErrorMessage = "Enter Quantity, please")]
         public int stock_quantity { get; set; }
         [Required(ErrorMessage = "Enter price, please")]
+        [Range(3,1000)]
         public double price { get; set; }
         [DataType(DataType.Upload)]
         [Display(Name = "Upload File")]

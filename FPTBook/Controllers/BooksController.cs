@@ -53,8 +53,10 @@ namespace FPTBook.Controllers
         public ActionResult Create([Bind(Include = "bookID,bookName,description,Img,stock_quantity,price,categoryID")] Book book, HttpPostedFileBase file)
         {
             string pic = System.IO.Path.GetFileName(file.FileName);
+
             if (file != null)
             {
+               
                 string path = Path.Combine(Server.MapPath("~/assets/img"), Path.GetFileName(file.FileName));
                 file.SaveAs(path);
                 book.Img = pic.ToString();
