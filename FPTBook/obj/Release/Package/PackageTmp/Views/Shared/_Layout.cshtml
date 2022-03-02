@@ -22,6 +22,8 @@
     <link rel="stylesheet" href="~/assets/css/Ludens-Users---25-After-Register.css">
     <link rel="stylesheet" href="~/assets/css/Pretty-Registration-Form.css">
     <link rel="stylesheet" href="~/assets/css/Register-form.css">
+    <link rel="stylesheet" href="~/assets/css/Aboutus.css">
+    <link rel="stylesheet" href="~/assets/css/Contact.css">
     <link rel="stylesheet" href="~/assets/css/Product.css">
     <link rel="stylesheet" href="~/assets/css/Registration-Form-with-Photo.css">
     <link rel="stylesheet" href="~/assets/css/untitled.css">
@@ -40,22 +42,18 @@
                         <li class="nav-item"><a class="nav-link active" style="color: var(--bs-yellow)" @Html.ActionLink("Home", "Index", "Home")</li>
                         <li class="nav-item"><a class="nav-link" href="about.html" style="color: var(--bs-yellow);">Contact</a></li>
                         <li class="nav-item"><a class="nav-link active" href="index.html" style="color: var(--bs-yellow);">About us</a></li>
-                    </ul><input type="search" placeholder="search"><i class="fa fa-search" style="font-size: 23px;color: var(--bs-white);margin-left: 12px;"></i>
-                    <ul class="navbar-nav nav-right">
-
-                        <li class="nav-item dropdown">
-                            <a aria-expanded="false" data-bs-toggle="dropdown" class="dropdown-toggle nav-link" href="#" style="color: var(--bs-yellow);">
-                                Category
-                            </a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="services.html" style="background: var(--bs-yellow);">Price Packages</a>
-                                <a class="dropdown-item" href="#" style="background: var(--bs-yellow);">Order Services</a>
-                                <a class="dropdown-item" href="#" style="background: var(--bs-yellow);">Custom Request</a>
-                            </div>
-                        </li>
-
                     </ul>
-
+                    @using (Html.BeginForm())
+                    {
+                        <div class="row">
+                            <div class="col col-sm-9">
+                                @Html.TextBox("searchstring", "", new { @class = "form-control", @type = "text", @placeholder = " Search", @style = "width: 200px;" })
+                            </div>
+                            <div class="col col-sm-3">
+                                <i type="submit" class="fa fa-search" style="font-size: 29px; color:  var(--bs-yellow)"></i>
+                            </div>
+                        </div>
+                    }
                     @if (Session["username"] != null)
                     {
                         <i class="fa fa-shopping-cart" style="background: var(--bs-gray-900);border-color: var(--bs-yellow);color: var(--bs-yellow);"></i>
@@ -75,8 +73,8 @@
                     }
 
                 </div>
-            </div>
-            
+                    </div>
+
         </nav><!-- End: Black-Navbar -->
     </header><!-- Start: Footer Dark -->
     <div class="container body-content">
@@ -99,12 +97,12 @@
                         <ul>
                             @if (Session["username"] != null)
                             {
-                                <li class="nav-item"><a class="nav-link" href="#" style="color: var(--bs-yellow);"@Html.ActionLink("Account", "EditInfor", "Users")</li>
+                                <li class="nav-item"><a class="nav-link" href="#" style="color: var(--bs-yellow);" @Html.ActionLink("Account", "EditInfor", "Users")</li>
                             }
                             else
                             {
-                            <li class="nav-item"><a class="nav-link"  style="color: var(--bs-yellow);"@Html.ActionLink("Sign in", "Login", "Users")</li>
-                            <li class="nav-item"><a class="nav-link"  style="color: var(--bs-yellow);"@Html.ActionLink("Sign up","Register","Users")</li>
+                                <li class="nav-item"><a class="nav-link" style="color: var(--bs-yellow);" @Html.ActionLink("Sign in", "Login", "Users")</li>
+                                <li class="nav-item"><a class="nav-link" style="color: var(--bs-yellow);" @Html.ActionLink("Sign up", "Register", "Users")</li>
                             }
 
 
@@ -134,6 +132,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
     <script src="~/assets/js/vanilla-zoom.js"></script>
     <script src="~/assets/js/theme.js"></script>
+    <script src="~/assets/js/dt.js"></script>
     <script src="https://geodata.solutions/includes/countrystate.js"></script><!-- End: Footer Dark -->
 </body>
 </html>

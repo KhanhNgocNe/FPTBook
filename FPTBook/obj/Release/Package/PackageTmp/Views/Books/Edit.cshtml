@@ -28,7 +28,8 @@
     <div class="form-group">
         @Html.LabelFor(model => model.Img, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            @Html.EditorFor(model => model.Img, new { htmlAttributes = new { @class = "form-control" } })<input type="file" name="file" id="file" style="width: 100%;" class="form-control" />
+            @Html.EditorFor(model => model.Img, new { htmlAttributes = new { @class = "form-control", @type = "hidden" } })
+            <input type="file" name="file" id="file" style="width: 100%;" class="form-control" />
             @Html.ValidationMessageFor(model => model.Img, "", new { @class = "text-danger" })
             <img src="~/assets/img/@Model.Img" width="30" height="30" />
         </div>
@@ -64,12 +65,12 @@
             @Html.ValidationMessageFor(model => model.categoryID, "", new { @class = "text-danger" })
         </div>
     </div>
-
+    <br />
     <div class="row form-group ">
-        <div class="col-sm-3 ">
+        <div class="col-sm-6 ">
             <button class="btn btn-primary d-block w-50" type="submit" style="background: var(--bs-yellow);border-color: var(--bs-white);">Save</button>
         </div>
-        <div class="col-sm-3 ">
+        <div class="col-sm-6 ">
             <a class="btn btn-primary d-block w-50" href="@Url.Action("Index","Books")" style="background: var(--bs-white); border-color: var(--bs-yellow);color:black ">Cancel</a>
         </div>
     </div>

@@ -93,11 +93,31 @@ namespace FPTBook.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "bookID,bookName,description,stock_quantity,price,categoryID")] Book book)
+        public ActionResult Edit([Bind(Include = "bookID,bookName,description,stock_quantity,price,Img,categoryID")] Book book, HttpPostedFileBase file, int id)
         {
+            Book rebook = db.Books.Find(id);
+            string pic = "";
+            if (file != null)
+            {
+                string file_name = book.Img;
+                string path1 = Server.MapPath("~/assets/img/");
+                FileInfo file1 = new FileInfo(path1 + file_name);
+                if (file1.Exists)
+                {
+                    file1.Delete();
+                }
+                pic = System.IO.Path.GetFileName(file.FileName);
+                string path = Path.Combine(Server.MapPath("~/assets/img/"), Path.GetFileName(file.FileName));
+                file.SaveAs(path);
+                rebook.Img = pic.ToString();
+            }
             if (ModelState.IsValid)
             {
-                db.Entry(book).State = EntityState.Modified;
+                rebook.bookName = book.bookName;
+                rebook.stock_quantity = book.stock_quantity;
+                rebook.price = book.price;
+                rebook.description = book.description;
+                rebook.categoryID = book.categoryID;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }

@@ -84,13 +84,13 @@ namespace FPTBook.Controllers
                 {
                     if (data.FirstOrDefault().state == 0)
                     {
-                        Session["UserName"] = data.FirstOrDefault().username;
+                        Session["username"] = data.FirstOrDefault().username;
                         return RedirectToAction("Index", "Home");
                     }
                     else
                     {
                         //add session
-                        
+                        Session["useradmin"] = data.FirstOrDefault().username;
                         return RedirectToAction("Index", "Admin");
                     }
 
@@ -119,7 +119,7 @@ namespace FPTBook.Controllers
             User obj = _db.Users.ToList().Find(s => s.username.Equals(username));
             if (obj == null)
             {
-                return HttpNotFound();
+                return RedirectToAction("Login");
             }
             return View(obj);
         }

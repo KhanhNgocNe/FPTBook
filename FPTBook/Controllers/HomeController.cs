@@ -19,7 +19,7 @@ namespace FPTBook.Controllers
         [HttpPost]
         public ActionResult Index(string searchstring)
         {
-            Session["Admin"] = null;
+           
             List<Book> data = new List<Book>();
             data = db.Books.Where(x => x.bookName.Contains(searchstring)).ToList();
             if (data == null)
@@ -31,8 +31,6 @@ namespace FPTBook.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
-
             return View();
         }
 

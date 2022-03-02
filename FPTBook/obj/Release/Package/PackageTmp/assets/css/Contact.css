@@ -1,0 +1,32 @@
+﻿.single-contact {
+    text-align: left;
+    position: relative;
+    padding-left: 70px;
+    margin-bottom: 50px;
+    margin-top: 10px;
+}
+
+    .single-contact i.fa {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        background-color: var(--bs-yellow);
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        border-radius: 3px;
+    }
+
+    .single-contact h5 {
+        font-size: 18px;
+        margin-bottom: 10px;
+        font-weight: 500;
+    }
+
+    .single-contact p {
+        font-size: 15px;
+        font-weight: 400;
+    }

@@ -11,6 +11,15 @@ namespace FPTBook.Controllers
         // GET: Admin
         public ActionResult Index()
         {
+            if (Session["username"] == Session["username"] && Session["useradmin"] != null)
+            {
+                return View();
+            }
+            return RedirectToAction("Error");
+            
+        }
+        public ActionResult Error()
+        {
             return View();
         }
     }
