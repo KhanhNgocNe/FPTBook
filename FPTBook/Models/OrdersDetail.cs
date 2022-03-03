@@ -17,6 +17,8 @@ namespace FPTBook.Models
         [Column(Order = 1)]
         public int bookID { get; set; }
         public double price { get; set; }
+        [Required]
+        [Range(0, 1000, ErrorMessage = "Please in input positive number")]
         public int quantity { get; set; }
         public double amount { get; set; }
         public virtual Orders Order { get; set; }

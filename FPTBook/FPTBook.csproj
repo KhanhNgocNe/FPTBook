@@ -167,6 +167,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\BooksController.cs" />
+    <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\CategoriesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageUserController.cs" />
@@ -175,11 +176,12 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202202251544200_FirstRun.cs" />
-    <Compile Include="Migrations\202202251544200_FirstRun.Designer.cs">
-      <DependentUpon>202202251544200_FirstRun.cs</DependentUpon>
+    <Compile Include="Migrations\202203030524090_FirstRun.cs" />
+    <Compile Include="Migrations\202203030524090_FirstRun.Designer.cs">
+      <DependentUpon>202203030524090_FirstRun.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Cart.cs" />
     <Compile Include="Models\Book.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\OrdersDetail.cs" />
@@ -218,6 +220,7 @@
     <Content Include="assets\css\Register-form.css" />
     <Content Include="assets\css\Registration-Form-with-Photo.css" />
     <Content Include="assets\css\Aboutus.css" />
+    <Content Include="assets\css\Cart.css" />
     <Content Include="assets\css\untitled.css" />
     <Content Include="assets\css\vanilla-zoom.min.css" />
     <Content Include="assets\fonts\fa-brands-400.svg" />
@@ -346,6 +349,8 @@
     <Content Include="Views\Books\Edit.cshtml" />
     <Content Include="Views\Books\Index.cshtml" />
     <Content Include="Views\Admin\Error.cshtml" />
+    <Content Include="Views\Cart\BagCart.cshtml" />
+    <Content Include="Views\Cart\ViewCart.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -364,8 +369,8 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202202251544200_FirstRun.resx">
-      <DependentUpon>202202251544200_FirstRun.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202203030524090_FirstRun.resx">
+      <DependentUpon>202203030524090_FirstRun.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

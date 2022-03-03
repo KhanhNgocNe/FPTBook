@@ -19,6 +19,7 @@ namespace FPTBook.Models
         public string bookName { get; set; }
         public string description { get; set; }
         [Required(ErrorMessage = "Enter Quantity, please")]
+        [Range(0,5000)]
         public int stock_quantity { get; set; }
         [Required(ErrorMessage = "Enter price, please")]
         [Range(3,1000)]

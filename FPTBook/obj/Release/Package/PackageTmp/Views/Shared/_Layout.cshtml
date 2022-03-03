@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
     <link rel="stylesheet" href="~/assets/bootstrap/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Bentham|Playfair+Display|Raleway:400,500|Suranna|Trocchi" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=ABeeZee&amp;display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface&amp;display=swap">
@@ -25,6 +26,7 @@
     <link rel="stylesheet" href="~/assets/css/Aboutus.css">
     <link rel="stylesheet" href="~/assets/css/Contact.css">
     <link rel="stylesheet" href="~/assets/css/Product.css">
+    <link rel="stylesheet" href="~/assets/css/Product - Detail.css">
     <link rel="stylesheet" href="~/assets/css/Registration-Form-with-Photo.css">
     <link rel="stylesheet" href="~/assets/css/untitled.css">
     <link rel="stylesheet" href="~/assets/css/vanilla-zoom.min.css">
@@ -40,8 +42,9 @@
                 <div class="collapse navbar-collapse" id="navcol-1" style="color: var(--bs-dark);">
                     <ul class="navbar-nav nav-right">
                         <li class="nav-item"><a class="nav-link active" style="color: var(--bs-yellow)" @Html.ActionLink("Home", "Index", "Home")</li>
-                        <li class="nav-item"><a class="nav-link" href="about.html" style="color: var(--bs-yellow);">Contact</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="index.html" style="color: var(--bs-yellow);">About us</a></li>
+                        <li class="nav-item"><a class="nav-link active"  style="color: var(--bs-yellow);" @Html.ActionLink("About us", "About", "Home")</a></li>
+                        <li class="nav-item"><a class="nav-link"  style="color: var(--bs-yellow);"@Html.ActionLink("Contact","Contact", "Home")</a></li>
+
                     </ul>
                     @using (Html.BeginForm())
                     {
