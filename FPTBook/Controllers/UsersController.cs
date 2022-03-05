@@ -115,7 +115,7 @@ namespace FPTBook.Controllers
 
         public ActionResult EditInfor()
         {
-            var username = Session["UserName"];
+            var username = Session["username"];
             User obj = _db.Users.ToList().Find(s => s.username.Equals(username));
             if (obj == null)
             {

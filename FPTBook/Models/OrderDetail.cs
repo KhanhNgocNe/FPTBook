@@ -7,12 +7,12 @@ using System.Web;
 
 namespace FPTBook.Models
 {
-    public class OrdersDetail
+    public class OrderDetail
     {
        
         [Key]
         [Column(Order = 0)]
-        public int ordersID { get; set; }
+        public int orderID { get; set; }
         [Key]
         [Column(Order = 1)]
         public int bookID { get; set; }
@@ -21,7 +21,7 @@ namespace FPTBook.Models
         [Range(0, 1000, ErrorMessage = "Please in input positive number")]
         public int quantity { get; set; }
         public double amount { get; set; }
-        public virtual Orders Order { get; set; }
+        public virtual Order Order { get; set; }
         public virtual Book Book { get; set; }
 
     }

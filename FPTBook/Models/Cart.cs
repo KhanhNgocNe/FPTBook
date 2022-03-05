@@ -46,17 +46,31 @@ namespace FPTBook.Models
             }
         }
 
-        public double Amout()
+        public double Amount(Book _book)
+        {
+            var item = items.FirstOrDefault(c => c._cartBook.bookID == _book.bookID);
+
+            var total = item._cartBook.price * item._cartQuantity;
+            return total;
+
+        }
+        public double Total()
         {
             var total = items.Sum(s => s._cartBook.price * s._cartQuantity);
 
             return total;
         }
+        public double TotalPrice()
+        {
+            var total = items.Sum(s => s._cartBook.price * s._cartQuantity);
+            return total+5;
+        }
 
-        public int Total()
+        public int TotalQuantity()
         {
             return items.Sum(s => s._cartQuantity);
         }
+
 
         public void DeleteCart(int id)
         {

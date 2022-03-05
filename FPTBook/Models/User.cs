@@ -10,7 +10,7 @@ namespace FPTBook.Models
     {
         public User()
         {
-            Orders = new HashSet<Orders>();
+            Orders = new HashSet<Order>();
         }
 
         [Key]
@@ -37,7 +37,7 @@ namespace FPTBook.Models
         [Required(ErrorMessage = "Enter Birthday, please")]
         public DateTime birthday { get; set; }
         public int state { get; set; }
-        public ICollection<Orders> Orders { get; set; }
+        public ICollection<Order> Orders { get; set; }
     }
 
     

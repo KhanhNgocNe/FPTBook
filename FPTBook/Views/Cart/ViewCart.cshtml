@@ -1,70 +1,123 @@
-﻿<body class="cart">
-    <div class="card">
+﻿@model FPTBook.Models.Cart
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="~/assets/css/Cart.css">
+
+@if (Model != null)
+{
+    <div class="carditem">
         <div class="row">
-            <div class="col-md-8 cart">
+            <div class="col-md-8 cartitem">
                 <div class="title">
                     <div class="row">
                         <div class="col">
                             <h4><b>Shopping Cart</b></h4>
                         </div>
-                        <div class="col align-self-center text-right text-muted">3 items</div>
+                        <div class="col align-self-center text-right text-muted">@Model.TotalQuantity() items</div>
                     </div>
                 </div>
-                <div class="row border-top border-bottom">
-                    <div class="row main align-items-center">
-                        <div class="col-2"><img class="img-fluid" src="https://i.imgur.com/1GrakTl.jpg"></div>
-                        <div class="col">
-                            <div class="row text-muted">Shirt</div>
-                            <div class="row">Cotton T-shirt</div>
+                @foreach (var item in Model.Items)
+                {
+                    <div class="row border-top border-bottom">
+                        <div class="row main align-items-center">
+                            <div class="col-2"><img class="img-fluid" src="~/assets/img/@item._cartBook.Img"></div>
+                            <div class="col">
+                                <div class="row text-muted">@item._cartBook.Category.categoryName</div>
+                                <div class="row">@item._cartBook.bookName</div>
+                            </div>
+                            @using (Html.BeginForm("UpdateQuantity", "Cart"))
+                            {
+                                <input type="hidden" value="@item._cartBook.bookID" name="bookID" />
+                                <input type="number" style="width: 60px;" value="@item._cartQuantity" name="Quantity" min="1" />
+                                <button type="submit" class="btncart" data-abc="true" style="width: 10%; border-block-color: var(--bs-yellow)"> Update</button>
+                            }
+                            <div class="col"  name="price">$ @item._cartBook.price </div>
+
+                            <div class="col">
+                                @Model.Amount(item._cartBook)
+                                <a class="close" href="@Url.Action("Delete", "Cart", new { id = item._cartBook.bookID})">&#10005;</a>
+                            </div>
                         </div>
-                        <div class="col"> <a href="#">-</a><a href="#" class="border">1</a><a href="#">+</a> </div>
-                        <div class="col">&euro; 44.00 <span class="close">&#10005;</span></div>
                     </div>
+                }
+                <div class="back-to-shop">
+                    <a href="@Url.Action("Index", "Home")">&leftarrow;</a>
+                    <span class="text-muted">Back to shop</span>
                 </div>
-                <div class="row">
-                    <div class="row main align-items-center">
-                        <div class="col-2"><img class="img-fluid" src="https://i.imgur.com/ba3tvGm.jpg"></div>
-                        <div class="col">
-                            <div class="row text-muted">Shirt</div>
-                            <div class="row">Cotton T-shirt</div>
-                        </div>
-                        <div class="col"> <a href="#">-</a><a href="#" class="border">1</a><a href="#">+</a> </div>
-                        <div class="col">&euro; 44.00 <span class="close">&#10005;</span></div>
-                    </div>
-                </div>
-                <div class="row border-top border-bottom">
-                    <div class="row main align-items-center">
-                        <div class="col-2"><img class="img-fluid" src="https://i.imgur.com/pHQ3xT3.jpg"></div>
-                        <div class="col">
-                            <div class="row text-muted">Shirt</div>
-                            <div class="row">Cotton T-shirt</div>
-                        </div>
-                        <div class="col"> <a href="#">-</a><a href="#" class="border">1</a><a href="#">+</a> </div>
-                        <div class="col">&euro; 44.00 <span class="close">&#10005;</span></div>
-                    </div>
-                </div>
-                <div class="back-to-shop"><a href="#">&leftarrow;</a><span class="text-muted">Back to shop</span></div>
             </div>
+
             <div class="col-md-4 summary">
                 <div>
                     <h5><b>Summary</b></h5>
                 </div>
                 <hr>
                 <div class="row">
-                    <div class="col" style="padding-left:0;">ITEMS 3</div>
-                    <div class="col text-right">&euro; 132.00</div>
+                    <div class="col" style="padding-left:0;">@Model.TotalQuantity() item</div>
+                    <div class="col text-right">
+                        $ @Model.Total()
+                    </div>
                 </div>
                 <form>
                     <p>SHIPPING</p> <select>
-                        <option class="text-muted">Standard-Delivery- &euro;5.00</option>
+                        <option class="text-muted">Standard-Delivery- $5.00</option>
                     </select>
-                    <p>GIVE CODE</p> <input id="code" placeholder="Enter your code">
+                    <p>GIVE CODE</p> <div class="incart"><input id="code" placeholder="Enter your code"></div>
                 </form>
                 <div class="row" style="border-top: 1px solid rgba(0,0,0,.1); padding: 2vh 0;">
                     <div class="col">TOTAL PRICE</div>
-                    <div class="col text-right">&euro; 137.00</div>
-                </div> <button class="btn">CHECKOUT</button>
+                    <div class="col text-right" name="total">$ @Model.TotalPrice()</div>
+                </div> <button class="btncart">CHECKOUT</button>
             </div>
         </div>
     </div>
-</body>
+    <hr />
+
+
+}
+@using (Html.BeginForm("Checkout", "Cart", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post))
+{
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <div class="col-md-6 offset-md-3">
+
+        <div class="card card-outline-secondary" style="">
+            <div class="card-body" style="width: 400px">
+                <h3 class="text-center">Checkout</h3>
+                <hr>
+                <form class="form" role="form" autocomplete="off">
+                    <div class="form-group">
+                        <label for="cc_name">User Name</label>
+                        <input type="text" class="form-control" name="username" value="@Session["UserName"]" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label>Telephone Number</label>
+                        <input type="text" class="form-control" name="phoneOrders" required="required">
+                    </div>
+                    <div class="form-group">
+                        <label for="cc_name">Address</label>
+                        <input type="text" class="form-control" name="addressOrder" required="required">
+                    </div>
+                    <div class="form-group">
+                        <label for="cc_name">Total</label>
+                        <input type="text" class="form-control" name="total" value="@Model.TotalPrice()">
+                    </div>
+                    <hr>
+                    <div class="form-group row">
+                        <div class="col-md-6">
+                            <button type="reset" class="btn btn-default btn-lg btn-block">Cancel</button>
+                        </div>
+                        <div class="col-md-6">
+                            <button type="submit" class="btn btn-success btn-lg btn-block">Checkout</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+}
+
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script scr="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+<script scr="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

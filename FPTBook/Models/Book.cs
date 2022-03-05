@@ -10,7 +10,7 @@ namespace FPTBook.Models
     {
         public Book()
         {
-            OrderDetails = new HashSet<OrdersDetail>();
+            OrderDetails = new HashSet<OrderDetail>();
         }
         [Key]
         [Required(ErrorMessage = "Enter ID, please")]
@@ -30,6 +30,6 @@ namespace FPTBook.Models
         public string Img { get; set; }
         public int categoryID { get; set; }
         public virtual Category Category { get; set; }
-        public ICollection<OrdersDetail> OrderDetails { get; set; }
+        public ICollection<OrderDetail> OrderDetails { get; set; }
     }
 }

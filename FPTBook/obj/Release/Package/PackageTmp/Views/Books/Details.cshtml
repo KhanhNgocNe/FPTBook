@@ -1,20 +1,20 @@
-﻿
+﻿@model FPTBook.Models.Book
 
-<body style="background-color: var(--bs-yellow) "; >
-    <div class="wrapper">
-        <div class="productdt-img">
-            <img src="http://bit.ly/2tMBBTd" height="420" width="327">
-        </div>
-        <div class="productdt-info">
-            <div class="productdt-text">
-                <h1>Harvest Vase</h1>
-                <h2>by studio and friends</h2>
-                <p>Harvest Vases are a reinterpretation<br> of peeled fruits and vegetables as<br> functional objects. The surfaces<br> appear to be sliced and pulled aside,<br> allowing room for growth. </p>
+    <body style="background-color: var(--bs-yellow) " ;>
+        <div class="wrapper">
+            <div class="productdt-img">
+                <img src="~/assets/img/@Model.Img" height="420" width="327">
             </div>
-            <div class="productdt-price-btn">
-                <p><span class="detail">78</span>$</p>
-                <button type="button">buy now</button>
+            <div class="productdt-info">
+                <div class="productdt-text">
+                    <h1>@Model.bookName</h1>
+                    <h2 style="margin-bottom: 10px">@Model.Category.categoryName</h2>
+                    <p>@Model.description</p>
+                    <div class="productdt-price-btn">
+                        <p><span class="detail">@Model.price</span>$</p>
+                        <button><a style="color: white" href="@Url.Action("AddtoCart", "Cart", new { id=Model.bookID})">Buy Now</a></button>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</body>
+    </body>

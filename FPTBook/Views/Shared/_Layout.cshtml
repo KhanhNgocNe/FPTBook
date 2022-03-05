@@ -38,7 +38,7 @@
         <nav class="navbar navbar-light navbar-expand-md navbar-fixed-top navigation-clean-button" style="background: var(--bs-dark);border-style: none;padding-top: 0;padding-bottom: 10px;margin-top: 0px;min-height: 8px;color: var(--bs-yellow);">
             <div class="container">
                 <button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1" style="color: var(--bs-yellow);"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon" style="color: var(--bs-yellow);"></span></button>
-                <div><a class="navbar-brand" href="#"><span style="color: var(--bs-yellow);font-family: ABeeZee, sans-serif;font-size: 32px;">FPTBook Store </span> </a></div>
+                <div><a class="navbar-brand" href="@Url.Action("Index", "Home")"><span style="color: var(--bs-yellow);font-family: ABeeZee, sans-serif;font-size: 32px;">FPTBook Store </span> </a></div>
                 <div class="collapse navbar-collapse" id="navcol-1" style="color: var(--bs-dark);">
                     <ul class="navbar-nav nav-right">
                         <li class="nav-item"><a class="nav-link active" style="color: var(--bs-yellow)" @Html.ActionLink("Home", "Index", "Home")</li>
@@ -59,7 +59,9 @@
                     }
                     @if (Session["username"] != null)
                     {
-                        <i class="fa fa-shopping-cart" style="background: var(--bs-gray-900);border-color: var(--bs-yellow);color: var(--bs-yellow);"></i>
+                        <a href="@Url.Action("ViewCart","Cart")">
+                            <i class="fa fa-shopping-cart" style="background: var(--bs-gray-900);border-color: var(--bs-yellow);color: var(--bs-yellow);">@Html.Action("BagCart", "Cart")</i>
+                        </a>
                         <p class="ms-auto navbar-text actions" style="text-align: right;">
                             <a class="login" style="color: rgba(224,217,217,0.9);" @Html.ActionLink($"Hello!{Session["username"]}", "EditInfor", "Users")
                             <a class="btn btn-primary" style="color: rgba(0,0,0,0.9);background: var(--bs-gray-200);border-radius: 10px;border-style: solid;

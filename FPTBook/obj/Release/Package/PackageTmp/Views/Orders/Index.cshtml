@@ -1,0 +1,58 @@
+﻿@model IEnumerable<FPTBook.Models.Order>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.User.password)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.addressOrder)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.phoneOrders)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.orderDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.total)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.User.password)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.addressOrder)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.phoneOrders)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.orderDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.total)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.orderID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.orderID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.orderID })
+        </td>
+    </tr>
+}
+
+</table>

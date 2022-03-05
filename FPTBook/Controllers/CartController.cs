@@ -1,4 +1,5 @@
-﻿using FPTBook.DB;
+﻿
+using FPTBook.DB;
 using FPTBook.Models;
 using System;
 using System.Collections.Generic;
@@ -42,7 +43,7 @@ namespace FPTBook.Controllers
             int idbook = int.Parse(form["bookID"]);
             int quantity = int.Parse(form["Quantity"]);
             cart.UpdateQuantity(idbook, quantity);
-            return RedirectToAction("ViewCart", "MyCarts");
+            return RedirectToAction("ViewCart", "Cart");
         }
 
         public ActionResult ViewCart()
@@ -66,52 +67,53 @@ namespace FPTBook.Controllers
             Cart cart = Session["Cart"] as Cart;
 
             if (cart != null)
-                totalitem = cart.Total();
+                totalitem = cart.TotalQuantity();
             ViewBag.TotalItem = totalitem;
 
             return PartialView("BagCart");
         }
         public ActionResult Checkout(FormCollection form)
         {
-            try
+            //try
+            //{
+            Cart cart = Session["Cart"] as Cart;
+            Order _orders = new Order();
+            _orders.orderDate = DateTime.Now;
+            _orders.Username = form["Username"];
+            _orders.addressOrder = form["addressOrder"];
+            _orders.phoneOrders = int.Parse(form["phoneOrders"]);
+            _orders.total = double.Parse(form["total"]);
+            _db.Orders.Add(_orders);
+
+            foreach (var item in cart.Items)
             {
-                Cart cart = Session["Cart"] as Cart;
-                Orders _orders = new Orders();
-                _orders.orderDate = DateTime.Now;
-                _orders.username = form["username"];
-                _orders.addressOrder = form["username"];
-                _orders.phoneOrders = Convert.ToInt32(form["phoneOrders"]);
-                _orders.total = Convert.ToInt32(form["total"]);
-                _db.Orders.Add(_orders);
+                OrderDetail orderDetail = new OrderDetail();
+                orderDetail.orderID = _orders.orderID;
+                orderDetail.bookID = item._cartBook.bookID;
+                orderDetail.quantity = item._cartQuantity;
+                orderDetail.price = item._cartBook.price;
+                orderDetail.amount = item._cartBook.price * item._cartQuantity;
+                var book = _db.Books.SingleOrDefault(s => s.bookID == orderDetail.bookID);
 
-                foreach (var item in cart.Items)
-                {
-                    OrdersDetail orderDetail = new OrdersDetail();
-                    orderDetail.ordersID = _orders.orderID;
-                    orderDetail.bookID = item._cartBook.bookID;
-                    orderDetail.quantity = item._cartQuantity;
-                    orderDetail.amount = item._cartBook.price * item._cartQuantity;
-                    var book = _db.Books.SingleOrDefault(s => s.bookID == orderDetail.bookID);
+                book.stock_quantity -= orderDetail.quantity;
+                _db.Books.Attach(book);
+                _db.Entry(book).Property(c => c.stock_quantity).IsModified = true;
 
-                    book.stock_quantity -= orderDetail.quantity;
-                    _db.Books.Attach(book);
-                    _db.Entry(book).Property(c => c.stock_quantity).IsModified = true;
-
-                    _db.OrdersDetails.Add(orderDetail);
-                }
-
-                _db.SaveChanges();
-                cart.ClearCart();
-                return RedirectToAction("CheckoutSuccess", "Cart", new { id = _orders.orderID });
+                _db.OrderDetails.Add(orderDetail);
             }
-            catch
-            {
-                return Content("Error checkout, Check information again");
-            }
+
+            _db.SaveChanges();
+            cart.ClearCart();
+            return RedirectToAction("CheckoutSuccess", "Cart", new { id = _orders.orderID });
+            //}
+            //catch
+            //{
+            //    return Content("Error checkout, Check information again");
+            //}
         }
         public ActionResult CheckoutSuccess(int? id)
         {
-            if (Session["username"] != null)
+            if (Session["Username"] != null)
             {
                 var order = _db.Orders.Find(id);
                 if (id == null)
@@ -129,9 +131,9 @@ namespace FPTBook.Controllers
 
         public ActionResult OrderHistory(string id)
         {
-            if (Session["username"] != null)
+            if (Session["Username"] != null)
             {
-                var orderHis = _db.Orders.ToList().Where(c => c.username == id);
+                var orderHis = _db.Orders.ToList().Where(c => c.Username == id);
 
                 if (id == null)
                 {
