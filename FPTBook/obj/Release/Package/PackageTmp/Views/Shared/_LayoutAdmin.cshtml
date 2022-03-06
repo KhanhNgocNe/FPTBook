@@ -16,11 +16,11 @@
             <div class="container-fluid d-flex flex-column p-0">
                 <a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="#">
                     <div class="sidebar-brand-icon rotate-n-15"><i class="fas fa-laugh-wink"></i></div>
-                    <div class="sidebar-brand-text mx-3"><span>Brand</span></div>
+                    <div class="sidebar-brand-text mx-3"><span href=@Url.Action("Index","Admin")>FPTBook</span></div>
                 </a>
                 <hr class="sidebar-divider my-0">
                 <ul class="navbar-nav text-light" id="accordionSidebar">
-                    <li class="nav-item"><a class="nav-link active" href="index.html"><i class="fas fa-tachometer-alt"></i><span>Management&nbsp;</span></a></li>
+                    <li class="nav-item"><a class="nav-link active"  href=@Url.Action("Index","Admin")><i class="fas fa-tachometer-alt"></i><span>Management&nbsp;</span></a></li>
                     <li class="nav-item">
                         <a class="nav-link" href=@Url.Action("Index","Categories")>
                             <i class="fa fa-caret-square-o-right" style="color: var(--bs-gray-900);"></i>
