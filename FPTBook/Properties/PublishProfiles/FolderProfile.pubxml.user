@@ -5,7 +5,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <_PublishTargetUrl>C:\mywebsite</_PublishTargetUrl>
-    <History>True|2022-03-05T08:40:39.6841324Z;True|2022-03-03T23:05:48.8104004+07:00;True|2022-03-03T21:27:45.7707829+07:00;True|2022-03-03T21:26:12.3236689+07:00;True|2022-03-03T21:20:39.8859265+07:00;True|2022-03-03T21:19:06.7142865+07:00;True|2022-03-03T13:28:25.6445745+07:00;True|2022-02-28T21:32:38.5749387+07:00;True|2022-02-28T21:32:26.4905464+07:00;False|2022-02-25T23:08:45.5212360+07:00;True|2022-02-25T10:04:48.8565308+07:00;True|2022-02-25T10:02:51.8533810+07:00;True|2022-02-25T08:28:07.4388160+07:00;True|2022-02-25T07:32:51.7858400+07:00;True|2022-02-24T11:22:58.2317195+07:00;</History>
+    <History>True|2022-03-05T09:54:44.0898263Z;True|2022-03-05T16:52:57.0821218+07:00;True|2022-03-05T16:32:38.2854133+07:00;True|2022-03-05T16:32:24.3539972+07:00;True|2022-03-05T16:28:26.8135007+07:00;True|2022-03-05T16:27:00.2469757+07:00;True|2022-03-05T15:40:39.6841324+07:00;True|2022-03-03T23:05:48.8104004+07:00;True|2022-03-03T21:27:45.7707829+07:00;True|2022-03-03T21:26:12.3236689+07:00;True|2022-03-03T21:20:39.8859265+07:00;True|2022-03-03T21:19:06.7142865+07:00;True|2022-03-03T13:28:25.6445745+07:00;True|2022-02-28T21:32:38.5749387+07:00;True|2022-02-28T21:32:26.4905464+07:00;False|2022-02-25T23:08:45.5212360+07:00;True|2022-02-25T10:04:48.8565308+07:00;True|2022-02-25T10:02:51.8533810+07:00;True|2022-02-25T08:28:07.4388160+07:00;True|2022-02-25T07:32:51.7858400+07:00;True|2022-02-24T11:22:58.2317195+07:00;</History>
   </PropertyGroup>
   <ItemGroup>
     <File Include="assets/bootstrap/css/bootstrap.min.css">
@@ -272,6 +272,9 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     <File Include="assetsadmin/bootstrap/js/bootstrap.min.js">
       <publishTime>02/22/2022 23:56:19</publishTime>
     </File>
+    <File Include="assetsadmin/css/Features-Boxed.css">
+      <publishTime>03/05/2022 16:58:03</publishTime>
+    </File>
     <File Include="assetsadmin/css/untitled.css">
       <publishTime>02/22/2022 23:56:19</publishTime>
     </File>
@@ -384,10 +387,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>03/02/2015 16:32:26</publishTime>
     </File>
     <File Include="bin/FPTBook.dll">
-      <publishTime>03/05/2022 15:40:38</publishTime>
+      <publishTime>03/05/2022 17:04:19</publishTime>
     </File>
     <File Include="bin/FPTBook.pdb">
-      <publishTime>03/05/2022 15:40:38</publishTime>
+      <publishTime>03/05/2022 17:04:19</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.Identity.Core.dll">
       <publishTime>11/25/2019 10:57:50</publishTime>
@@ -699,7 +702,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>03/02/2022 10:20:09</publishTime>
     </File>
     <File Include="Views/Admin/Index.cshtml">
-      <publishTime>03/05/2022 15:35:05</publishTime>
+      <publishTime>03/05/2022 16:25:08</publishTime>
     </File>
     <File Include="Views/Books/Create.cshtml">
       <publishTime>03/02/2022 10:08:12</publishTime>
@@ -822,7 +825,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>03/05/2022 15:13:17</publishTime>
     </File>
     <File Include="Views/Shared/_LayoutAdmin.cshtml">
-      <publishTime>03/05/2022 15:40:37</publishTime>
+      <publishTime>03/05/2022 17:07:48</publishTime>
     </File>
     <File Include="Views/Shared/_LoginPartial.cshtml">
       <publishTime>02/17/2022 11:58:49</publishTime>

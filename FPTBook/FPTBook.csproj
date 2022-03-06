@@ -194,6 +194,8 @@
   <ItemGroup>
     <Content Include="assetsadmin\bootstrap\css\bootstrap.min.css" />
     <Content Include="assetsadmin\bootstrap\js\bootstrap.min.js" />
+    <Content Include="assetsadmin\css\Checkout.css" />
+    <Content Include="assetsadmin\css\Features-Boxed.css" />
     <Content Include="assetsadmin\css\untitled.css" />
     <Content Include="assetsadmin\fonts\fa-brands-400.svg" />
     <Content Include="assetsadmin\fonts\fa-regular-400.svg" />
@@ -214,6 +216,7 @@
     <Content Include="assets\bootstrap\js\bootstrap.min.js" />
     <Content Include="assets\css\Contact.css" />
     <Content Include="assets\css\Black-Navbar.css" />
+    <Content Include="assets\css\icon.css" />
     <Content Include="assets\css\Login-Form-Dark.css" />
     <Content Include="assets\css\Ludens-Users---25-After-Register.css" />
     <Content Include="assets\css\Pretty-Registration-Form.css" />
