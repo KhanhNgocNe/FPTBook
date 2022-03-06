@@ -29,12 +29,17 @@ namespace FPTBook.Controllers
 
         public ActionResult AddtoCart(int id)
         {
-            var book = _db.Books.SingleOrDefault(c => c.bookID == id);
-            if (book != null)
+            if (Session["UserName"] != null)
             {
-                GetCart().Add(book);
+                var book = _db.Books.SingleOrDefault(c => c.bookID == id);
+                if (book != null)
+                {
+                    GetCart().Add(book);
+                }
+                return RedirectToAction("ViewCart", "Cart");
             }
-            return RedirectToAction("ViewCart", "Cart");
+               
+            return RedirectToAction("Login", "User");
         }
 
         public ActionResult UpdateQuantity(FormCollection form)
