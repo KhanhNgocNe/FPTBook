@@ -1,0 +1,69 @@
+﻿@model FPTBook.Models.User
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>User</h4>
+    <hr />
+
+    <div class="col-lg-8">
+        <div class="card mb-4">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <p class="mb-0">Full Name</p>
+                    </div>
+                    <div class="col-sm-9">
+                        <p class="text-muted mb-0">  @Html.DisplayNameFor(model => model.fullname)</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <p class="mb-0">Email</p>
+                    </div>
+                    <div class="col-sm-9">
+                        <p class="text-muted mb-0">@Html.DisplayFor(model => model.email)</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <p class="mb-0">Phone</p>
+                    </div>
+                    <div class="col-sm-9">
+                        <p class="text-muted mb-0">@Html.DisplayFor(model => model.telephone)</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <p class="mb-0">Birthday</p>
+                    </div>
+                    <div class="col-sm-9">
+                        <p class="text-muted mb-0"> @Html.DisplayFor(model => model.birthday)</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <p class="mb-0">Address</p>
+                    </div>
+                    <div class="col-sm-9">
+                        <p class="text-muted mb-0"> @Html.DisplayFor(model => model.address)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.username }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>

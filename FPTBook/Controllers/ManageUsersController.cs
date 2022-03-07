@@ -11,17 +11,17 @@ using FPTBook.Models;
 
 namespace FPTBook.Controllers
 {
-    public class ManageUserController : Controller
+    public class ManageUsersController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
-        // GET: ManageUser
+        // GET: ManageUsers
         public ActionResult Index()
         {
             return View(db.Users.ToList());
         }
 
-        // GET: ManageUser/Details/5
+        // GET: ManageUsers/Details/5
         public ActionResult Details(string id)
         {
             if (id == null)
@@ -35,31 +35,9 @@ namespace FPTBook.Controllers
             }
             return View(user);
         }
+       
 
-        // GET: ManageUser/Create
-        public ActionResult Create()
-        {
-            return View();
-        }
-
-        // POST: ManageUser/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "username,password,confirmPassword,fullname,telephone,email,address,gender,birthday,state")] User user)
-        {
-            if (ModelState.IsValid)
-            {
-                db.Users.Add(user);
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
-
-            return View(user);
-        }
-
-        // GET: ManageUser/Edit/5
+        // GET: ManageUsers/Edit/5
         public ActionResult Edit(string id)
         {
             if (id == null)
@@ -74,7 +52,7 @@ namespace FPTBook.Controllers
             return View(user);
         }
 
-        // POST: ManageUser/Edit/5
+        // POST: ManageUsers/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -90,7 +68,7 @@ namespace FPTBook.Controllers
             return View(user);
         }
 
-        // GET: ManageUser/Delete/5
+        // GET: ManageUsers/Delete/5
         public ActionResult Delete(string id)
         {
             if (id == null)
@@ -105,7 +83,7 @@ namespace FPTBook.Controllers
             return View(user);
         }
 
-        // POST: ManageUser/Delete/5
+        // POST: ManageUsers/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(string id)

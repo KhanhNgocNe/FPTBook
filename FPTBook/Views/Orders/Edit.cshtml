@@ -2,7 +2,7 @@
 
 @{
     ViewBag.Title = "Edit";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
 
 <h2>Edit</h2>
@@ -56,7 +56,7 @@
             <button class="btn btn-primary d-block w-50" type="submit" style="background: var(--bs-yellow);border-color: var(--bs-white);">Save</button>
         </div>
         <div class="col-sm-6 ">
-            <a class="btn btn-primary d-block w-50" href="@Url.Action("Index","Categories")" style="background: var(--bs-white); border-color: var(--bs-yellow);color:black ">Cancel</a>
+            <a class="btn btn-primary d-block w-50" href="@Url.Action("Index","Orders")" style="background: var(--bs-white); border-color: var(--bs-yellow);color:black ">Cancel</a>
         </div>
     </div>
 </div>

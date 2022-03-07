@@ -170,7 +170,7 @@
     <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\CategoriesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\ManageUserController.cs" />
+    <Compile Include="Controllers\ManageUsersController.cs" />
     <Compile Include="Controllers\OrdersController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="DB\ApplicationDbContext.cs" />
@@ -247,11 +247,8 @@
     <Content Include="assets\img\book cover\c1.jpg" />
     <Content Include="assets\img\book cover\c2.jpg" />
     <Content Include="assets\img\book cover\c3.jpg" />
-    <Content Include="assets\img\tech\3db5bbc3ef20237e7a31.jpg" />
-    <Content Include="assets\img\tech\51f43c9f687ca422fd6d.jpg" />
     <Content Include="assets\img\tech\6782a2fcf61f3a41630e.jpg" />
     <Content Include="assets\img\tech\755e3a5d6ebea2e0fbaf.jpg" />
-    <Content Include="assets\img\tech\d8469951cdb201ec58a3.jpg" />
     <Content Include="assets\img\tech\image4.jpg" />
     <Content Include="assets\js\dt.js" />
     <Content Include="assets\js\theme.js" />
@@ -342,11 +339,6 @@
     <Content Include="Views\Categories\Delete.cshtml" />
     <Content Include="Views\Categories\Edit.cshtml" />
     <Content Include="Views\Categories\Index.cshtml" />
-    <Content Include="Views\ManageUser\Create.cshtml" />
-    <Content Include="Views\ManageUser\Delete.cshtml" />
-    <Content Include="Views\ManageUser\Details.cshtml" />
-    <Content Include="Views\ManageUser\Edit.cshtml" />
-    <Content Include="Views\ManageUser\Index.cshtml" />
     <Content Include="Views\Books\Create.cshtml" />
     <Content Include="Views\Books\Delete.cshtml" />
     <Content Include="Views\Books\Details.cshtml" />
@@ -361,6 +353,10 @@
     <Content Include="Views\Orders\Details.cshtml" />
     <Content Include="Views\Orders\Edit.cshtml" />
     <Content Include="Views\Orders\Index.cshtml" />
+    <Content Include="Views\ManageUsers\Delete.cshtml" />
+    <Content Include="Views\ManageUsers\Details.cshtml" />
+    <Content Include="Views\ManageUsers\Edit.cshtml" />
+    <Content Include="Views\ManageUsers\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
