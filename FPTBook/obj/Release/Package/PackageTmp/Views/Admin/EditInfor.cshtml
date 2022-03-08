@@ -1,15 +1,20 @@
 ﻿@model FPTBook.Models.User
 @{
     ViewBag.Title = "EditInfor";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
+
+<h2>EditInfor</h2>
+
+
+
 <body>
-    <!-- Start: Pretty Registration Form -->
-    @using (Html.BeginForm("EditInfor", "Users", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+   
+    @using (Html.BeginForm("EditInfor", "Admin", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
     {
         @Html.AntiForgeryToken()
         <form>
-            <div class="row register-form" style="background: var(--bs-yellow);">
+            <div>
                 <div class="col-md-8 offset-md-2 custom-form" style="background-color: white">
                     <h2 class="text-center">Account</h2>
                     <div class="row form-group">
@@ -91,7 +96,7 @@
                     </div>
                     <div class="row col-md-8 offset-md-2">
 
-                        <button class="btn btn-light submit-button" type="submit" style="background: var(--bs-gray-900);">Save</button>
+                        <button class="btn btn-light submit-button" type="submit" style="background: var(--bs-yellow);">Save</button>
                         <button class="btn btn-light submit-button" type="button" style="background: var(--bs-gray-900);">Cancel</button>
                     </div>
                 </div>

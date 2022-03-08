@@ -17,7 +17,7 @@ namespace FPTBook.Models
         public int orderID { get; set; }
         public string addressOrder { get; set; }
         public int phoneOrders { get; set; }
-        [DisplayFormat(DataFormatString = "{dd/MM/yyyy}")]
+        //[DisplayFormat(DataFormatString = "{dd/MM/yyyy}")]
         public DateTime orderDate { get; set; }
         public double total { get; set; }
         public string Username { get; set; }

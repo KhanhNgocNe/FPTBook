@@ -20,21 +20,21 @@
                     <div class="box">
                         <i class="fa fa-book icon" style="color:var(--bs-yellow)"></i>
                         <h3 class="name">Manage Book</h3>
-                        <p class="description">Books: @ViewBag.TotalBooks</p><a class="learn-more" @Url.Action("Index","Books")>Learn more »</a>
+                        <p class="description">Books: @ViewBag.TotalBooks</p><a class="learn-more" href="@Url.Action("Index","Books")">Learn more »</a>
                     </div>
                 </div>
                 <div class="col-sm-6 col-md-5 col-lg-6 item">
                     <div class="box">
                         <i class="fa fa-shopping-cart icon" style="color:var(--bs-yellow)"></i>
                         <h3 class="name">Manage Orders</h3>
-                        <p class="description">Orders: @ViewBag.TotalOrders</p><a class="learn-more" @Url.Action("Index","Orders")>Learn more »</a>
+                        <p class="description">Orders: @ViewBag.TotalOrders</p><a class="learn-more" href="@Url.Action("Index","Orders")">Learn more »</a>
                     </div>
                 </div>
                 <div class="col-sm-6 col-md-5 col-lg-6 item">
                     <div class="box">
                         <i class="fa fa-user icon" style="color:var(--bs-yellow)"></i>
                         <h3 class="name">Manage User</h3>
-                        <p class="description">Users: @ViewBag.TotalUsers</p><a class="learn-more" @Url.Action("Index","Users")>Learn more »</a>
+                        <p class="description">Users: @ViewBag.TotalUsers</p><a class="learn-more" href="@Url.Action("Index","Users")">Learn more »</a>
                     </div>
                 </div>
             </div>

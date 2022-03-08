@@ -348,15 +348,13 @@
     <Content Include="Views\Cart\BagCart.cshtml" />
     <Content Include="Views\Cart\ViewCart.cshtml" />
     <Content Include="Views\Cart\CheckoutSuccess.cshtml" />
-    <Content Include="Views\Orders\Create.cshtml" />
     <Content Include="Views\Orders\Delete.cshtml" />
-    <Content Include="Views\Orders\Details.cshtml" />
-    <Content Include="Views\Orders\Edit.cshtml" />
     <Content Include="Views\Orders\Index.cshtml" />
     <Content Include="Views\ManageUsers\Delete.cshtml" />
     <Content Include="Views\ManageUsers\Details.cshtml" />
     <Content Include="Views\ManageUsers\Edit.cshtml" />
     <Content Include="Views\ManageUsers\Index.cshtml" />
+    <Content Include="Views\Admin\EditInfor.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

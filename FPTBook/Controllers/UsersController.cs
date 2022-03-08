@@ -17,19 +17,6 @@ namespace FPTBook.Controllers
     {
         private ApplicationDbContext _db = new ApplicationDbContext();
 
-        // GET: Home
-        public ActionResult Index()
-        {
-            if (Session["username"] != null)
-            {
-                return View();
-            }
-            else
-            {
-                return RedirectToAction("Login");
-            }
-        }
-
         //GET: Register
 
         public ActionResult Register()
@@ -116,7 +103,9 @@ namespace FPTBook.Controllers
         public ActionResult EditInfor()
         {
             var username = Session["username"];
+            
             User obj = _db.Users.ToList().Find(s => s.username.Equals(username));
+           
             if (obj == null)
             {
                 return RedirectToAction("Login");
@@ -129,20 +118,24 @@ namespace FPTBook.Controllers
         public ActionResult EditInfor(User obj)
         {
             User tmp = _db.Users.ToList().Find(s =>  s.username == obj.username); //find the customer in a list have the same ID with the ID input
-            if (tmp != null)  //if find out the customer
+            if (tmp.password != obj.password)  //if find out the customer
             {
+                tmp.password = GetMD5(obj.password);
+                tmp.confirmPassword = GetMD5(obj.confirmPassword);
+            }
+            
+            
                 tmp.username = obj.username;
                 tmp.fullname = obj.fullname;
-                tmp.password = GetMD5(obj.password);
                 tmp.telephone = obj.telephone;
                 tmp.email = obj.email;
+                tmp.gender = obj.gender;
                 tmp.birthday = obj.birthday;
                 tmp.address = obj.address;
-                tmp.confirmPassword = GetMD5(obj.confirmPassword);
-                tmp.state= obj.state = 0;
-            }
+                tmp.state= obj.state=0;
             _db.SaveChanges();
             return RedirectToAction("Index", "Home");
+            
         }
 
         //create a string MD5

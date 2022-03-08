@@ -79,8 +79,8 @@ namespace FPTBook.Controllers
         }
         public ActionResult Checkout(FormCollection form)
         {
-            //try
-            //{
+            try
+            {
             Cart cart = Session["Cart"] as Cart;
             Order _orders = new Order();
             _orders.orderDate = DateTime.Now;
@@ -110,11 +110,11 @@ namespace FPTBook.Controllers
             _db.SaveChanges();
             cart.ClearCart();
             return RedirectToAction("CheckoutSuccess", "Cart", new { id = _orders.orderID });
-            //}
-            //catch
-            //{
-            //    return Content("Error checkout, Check information again");
-            //}
+            }
+            catch
+            {
+                return Content("Error checkout, Check information again");
+            }
         }
         public ActionResult CheckoutSuccess(int? id)
         {

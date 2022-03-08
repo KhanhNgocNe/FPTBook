@@ -14,7 +14,7 @@
     <div id="wrapper">
         <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0" style="background: var(--bs-yellow);">
             <div class="container-fluid d-flex flex-column p-0">
-                <a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="#">
+                <a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="@Url.Action("Index","Admin")">
                     <div class="sidebar-brand-icon rotate-n-15"><i class="fas fa-laugh-wink"></i></div>
                     <div class="sidebar-brand-text mx-3"><span href=@Url.Action("Index","Admin")>FPTBook</span></div>
                 </a>
@@ -40,8 +40,8 @@
                         </a>
                     </li>
                     <li class="nav-item"></li>
-                    <li class="nav-item"><a class="nav-link" href=@Url.Action("Index","ManageUsers")><i class="fa fa-user" style="color: var(--bs-gray-900);"></i><span style="color: var(--bs-gray-900);">Manage User</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="login.html"><i class="far fa-user-circle" style="color: var(--bs-gray-900);"></i><span style="color: var(--bs-gray-900);">Account</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="@Url.Action("Index","ManageUsers")"><i class="fa fa-user" style="color: var(--bs-gray-900);"></i><span style="color: var(--bs-gray-900);">Manage User</span></a></li>
+                    <li class="nav-item"><a class="nav-link"href="@Url.Action("EditInfor","Admin")"><i class="far fa-user-circle" style="color: var(--bs-gray-900);"></i><span style="color: var(--bs-gray-900);">Account</span></a></li>
                     <li class="nav-item"><a class="nav-link" href="@Url.Action("Logout","Users")"><i class="fas fa-user-circle" style="color: var(--bs-gray-900);"></i><span style="color: var(--bs-gray-900);">Logout</span></a></li>
                 </ul>
                 <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0" id="sidebarToggle" type="button" style="color: var(--bs-danger);"></button></div>
