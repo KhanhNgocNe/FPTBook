@@ -5,71 +5,71 @@
 
 @if (Model != null)
 {
-    <div class="carditem">
-        <div class="row">
-            <div class="col-md-8 cartitem">
-                <div class="title">
-                    <div class="row">
-                        <div class="col">
-                            <h4><b>Shopping Cart</b></h4>
-                        </div>
-                        <div class="col align-self-center text-right text-muted">@Model.TotalQuantity() items</div>
+<div class="carditem">
+    <div class="row">
+        <div class="col-md-8 cartitem">
+            <div class="title">
+                <div class="row">
+                    <div class="col">
+                        <h4><b>Shopping Cart</b></h4>
                     </div>
-                </div>
-                @foreach (var item in Model.Items)
-                {
-                    <div class="row border-top border-bottom">
-                        <div class="row main align-items-center">
-                            <div class="col-2"><img class="img-fluid" src="~/assets/img/@item._cartBook.Img"></div>
-                            <div class="col">
-                                <div class="row text-muted">@item._cartBook.Category.categoryName</div>
-                                <div class="row">@item._cartBook.bookName</div>
-                            </div>
-                            @using (Html.BeginForm("UpdateQuantity", "Cart"))
-                            {
-                                <input type="hidden" value="@item._cartBook.bookID" name="bookID" />
-                                <input type="number" style="width: 60px;" value="@item._cartQuantity" name="Quantity" min="1" />
-                                <button type="submit" class="btncart" data-abc="true" style="width: 10%; border-block-color: var(--bs-yellow)"> Update</button>
-                            }
-                            <div class="col"  name="price">$ @item._cartBook.price </div>
-
-                            <div class="col">
-                                @Model.Amount(item._cartBook)
-                                <a class="close" href="@Url.Action("Delete", "Cart", new { id = item._cartBook.bookID})">&#10005;</a>
-                            </div>
-                        </div>
-                    </div>
-                }
-                <div class="back-to-shop">
-                    <a href="@Url.Action("Index", "Home")">&leftarrow;</a>
-                    <span class="text-muted">Back to shop</span>
+                    <div class="col align-self-center text-right text-muted">@Model.TotalQuantity() items</div>
                 </div>
             </div>
+            @foreach (var item in Model.Items)
+            {
+                <div class="row border-top border-bottom">
+                    <div class="row main align-items-center">
+                        <div class="col-2"><img class="img-fluid" src="~/assets/img/@item._cartBook.Img"></div>
+                        <div class="col">
+                            <div class="row text-muted">@item._cartBook.Category.categoryName</div>
+                            <div class="row">@item._cartBook.bookName</div>
+                        </div>
+                        @using (Html.BeginForm("UpdateQuantity", "Cart"))
+                        {
+                            <input type="hidden" value="@item._cartBook.bookID" name="bookID" />
+                            <input type="number" style="width: 60px;" value="@item._cartQuantity" name="Quantity" min="1" />
+                            <button type="submit" class="btncart" data-abc="true" style="width: 10%; border-block-color: var(--bs-yellow)"> Update</button>
+                        }
+                        <div class="col" name="price">$ @item._cartBook.price </div>
 
-            <div class="col-md-4 summary">
-                <div>
-                    <h5><b>Summary</b></h5>
-                </div>
-                <hr>
-                <div class="row">
-                    <div class="col" style="padding-left:0;">@Model.TotalQuantity() item</div>
-                    <div class="col text-right">
-                        $ @Model.Total()
+                        <div class="col">
+                           Amount: $@Model.Amount(item._cartBook)
+                            <a class="close" href="@Url.Action("Delete", "Cart", new { id = item._cartBook.bookID})">&#10005;</a>
+                        </div>
                     </div>
                 </div>
-                <form>
-                    <p>SHIPPING</p> <select>
-                        <option class="text-muted">Standard-Delivery- $5.00</option>
-                    </select>
-                    <p>GIVE CODE</p> <div class="incart"><input id="code" placeholder="Enter your code"></div>
-                </form>
-                <div class="row" style="border-top: 1px solid rgba(0,0,0,.1); padding: 2vh 0;">
-                    <div class="col">TOTAL PRICE</div>
-                    <div class="col text-right" name="total">$ @Model.TotalPrice()</div>
-                </div> <button class="btncart">CHECKOUT</button>
+            }
+            <div class="back-to-shop">
+                <a href="@Url.Action("Index", "Home")">&leftarrow;</a>
+                <span class="text-muted">Back to shop</span>
             </div>
         </div>
+
+        <div class="col-md-4 summary">
+            <div>
+                <h5><b>Summary</b></h5>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col" style="padding-left:0;">@Model.TotalQuantity() item</div>
+                <div class="col text-right">
+                    $ @Model.Total()
+                </div>
+            </div>
+            <form>
+                <p>SHIPPING</p> <select>
+                    <option class="text-muted">Standard-Delivery- $5.00</option>
+                </select>
+                <p>GIVE CODE</p> <div class="incart"><input id="code" placeholder="Enter your code"></div>
+            </form>
+            <div class="row" style="border-top: 1px solid rgba(0,0,0,.1); padding: 2vh 0;">
+                <div class="col">TOTAL PRICE</div>
+                <div class="col text-right" name="total"> $ @Model.TotalPrice()</div>
+            </div> <a class="btncart" href="@Url.Action("Index", "Home")">BUY CONTINUE</a>
+        </div>
     </div>
+</div>
     <hr />
 
 
@@ -101,13 +101,14 @@
                         <input type="text" class="form-control" name="total" value="@Model.TotalPrice()">
                     </div>
                     <hr>
-                    <div class="form-group row">
-                        <div class="col-md-6">
-                            <button type="reset" class="btn btn-default btn-lg btn-block">Cancel</button>
+                    <div class="form-group">
+                        <div class="row row-cols-3">
+                            <button type="submit" class="btncart">Checkout</button>
                         </div>
-                        <div class="col-md-6">
-                            <button type="submit" class="btn btn-success btn-lg btn-block">Checkout</button>
-                        </div>
+                    </div>
+                    <div class="back-to-shop">
+                        <a href="@Url.Action("Index", "Home")">&leftarrow;</a>
+                        <span class="text-muted">Back to shop</span>
                     </div>
                 </form>
             </div>

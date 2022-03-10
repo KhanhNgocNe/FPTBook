@@ -11,7 +11,7 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.password)
+            @Html.DisplayNameFor(model => model.username)
         </th>
         
         <th>
@@ -41,7 +41,7 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.password)
+            @Html.DisplayFor(modelItem => item.username)
         </td>
        
         <td>
@@ -66,11 +66,10 @@
             @Html.DisplayFor(modelItem => item.state)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.username }) |
-            @Html.ActionLink("Details", "Details", new { id=item.username }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.username })
+            @Html.ActionLink(" ", "Edit", new { id=item.username }, new { @class = "fas fa-edit", @style = "color: var(--bs-yellow)" }) |
+            @Html.ActionLink(" ", "Details", new { id=item.username }, new { @class = "fas fa-info", @style = "color: var(--bs-yellow)" }) |
+            @Html.ActionLink(" ", "Delete", new { id=item.username }, new { @class = "fas fa-trash", @style = "color: var(--bs-yellow)" })
         </td>
     </tr>
 }
-
 </table>

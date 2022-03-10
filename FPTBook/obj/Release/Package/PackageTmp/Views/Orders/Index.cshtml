@@ -30,28 +30,29 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.User.username)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.addressOrder)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.phoneOrders)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.orderDate)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.total)
-        </td>
-        <td>
-           
-            @Html.ActionLink("Delete", "Delete", new { id=item.orderID })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.User.username)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.addressOrder)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.phoneOrders)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.orderDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.total)
+            </td>
+            <td>
+
+                @Html.ActionLink(" ", "Delete", new { id = item.orderID }, new { @class = "fas fa-trash", @style = "color: var(--bs-yellow)" })
+            </td>
+        </tr>
+    }
 
 </table>
