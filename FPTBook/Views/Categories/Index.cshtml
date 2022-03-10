@@ -8,7 +8,7 @@
 <h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink(" ", "Create", " ", new { @class = "fa fa-plus", @style = "color: var(--bs-yellow)" })
 </p>
 <table class="table">
     <tr>
@@ -30,8 +30,8 @@
             @Html.DisplayFor(modelItem => item.description)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.categoryID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.categoryID })
+            @Html.ActionLink(" ", "Edit", new { id=item.categoryID }, new { @class = "fas fa-edit", @style = "color: var(--bs-yellow)" }) |
+            @Html.ActionLink(" ", "Delete", new { id=item.categoryID }, new { @class = "fas fa-trash", @style = "color: var(--bs-yellow)" })
         </td>
     </tr>
 }

@@ -89,14 +89,15 @@
             </div>
         </div>
 
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Save" class="btn btn-default" />
+        <div class="row form-group ">
+            <div class="col-sm-6 ">
+                <button class="btn btn-primary d-block w-50" type="submit" style="background: var(--bs-yellow);border-color: var(--bs-white);">Save</button>
+            </div>
+            <div class="col-sm-6 ">
+                <a class="btn btn-primary d-block w-50" href="@Url.Action("Index","ManageUsers")" style="background: var(--bs-white); border-color: var(--bs-yellow);color:black ">Cancel</a>
             </div>
         </div>
     </div>
 }
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
+

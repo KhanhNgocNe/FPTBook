@@ -7,14 +7,12 @@ namespace FPTBook.Migrations
     {
         public override void Up()
         {
-            DropIndex("dbo.Orders", new[] { "username" });
-            CreateIndex("dbo.Orders", "Username");
+            AlterColumn("dbo.Books", "Img", c => c.String());
         }
         
         public override void Down()
         {
-            DropIndex("dbo.Orders", new[] { "Username" });
-            CreateIndex("dbo.Orders", "username");
+            AlterColumn("dbo.Books", "Img", c => c.String(nullable: false));
         }
     }
 }

@@ -42,6 +42,7 @@ namespace FPTBook.Models
             var item = items.Find(s => s._cartBook.bookID == id);
             if (item != null)
             {
+
                 item._cartQuantity = _quantity;
             }
         }
@@ -63,7 +64,7 @@ namespace FPTBook.Models
         public double TotalPrice()
         {
             var total = items.Sum(s => s._cartBook.price * s._cartQuantity);
-            return total+5;
+            return total + 5;
         }
 
         public int TotalQuantity()

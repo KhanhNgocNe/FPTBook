@@ -11,87 +11,85 @@
 <div>
     <h4>User</h4>
     <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.password)
-        </dt>
+    <div class="col-lg-8">
+        <div class="card mb-4">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <p class="mb-0">Full Name</p>
+                    </div>
+                    <div class="col-sm-9">
+                        <p class="text-muted mb-0">  @Html.DisplayNameFor(model => model.fullname)</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <p class="mb-0">Email</p>
+                    </div>
+                    <div class="col-sm-9">
+                        <p class="text-muted mb-0">@Html.DisplayFor(model => model.email)</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <p class="mb-0">Phone</p>
+                    </div>
+                    <div class="col-sm-9">
+                        <p class="text-muted mb-0">@Html.DisplayFor(model => model.telephone)</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <p class="mb-0">Birthday</p>
+                    </div>
+                    <div class="col-sm-9">
+                        <p class="text-muted mb-0"> @Html.DisplayFor(model => model.birthday)</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <p class="mb-0">Address</p>
+                    </div>
+                    <div class="col-sm-9">
+                        <p class="text-muted mb-0"> @Html.DisplayFor(model => model.address)</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <p class="mb-0">Gender</p>
+                    </div>
+                    <div class="col-sm-9">
+                        <p class="text-muted mb-0"> @Html.DisplayFor(model => model.gender)</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <p class="mb-0">Birthday</p>
+                    </div>
+                    <div class="col-sm-9">
+                        <p class="text-muted mb-0"> @Html.DisplayFor(model => model.birthday)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.password)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.confirmPassword)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.confirmPassword)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.fullname)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.fullname)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.telephone)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.telephone)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.email)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.email)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.address)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.address)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.gender)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.gender)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.birthday)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.birthday)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.state)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.state)
-        </dd>
-
-    </dl>
-
-    @using (Html.BeginForm()) {
+    @using (Html.BeginForm())
+    {
         @Html.AntiForgeryToken()
-
-        <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+        <div class="row form-group ">
+            <div class="col-sm-6 ">
+                <button class="btn btn-primary d-block w-50" type="submit" value="Delete" style="background: var(--bs-yellow);border-color: var(--bs-white);">Delete</button>
+            </div>
+            <div class="col-sm-6 ">
+                <a class="btn btn-primary d-block w-50" href="@Url.Action("Index","ManageUsers")" style="background: var(--bs-white); border-color: var(--bs-yellow);color:black ">Cancel</a>
+            </div>
         </div>
     }
 </div>

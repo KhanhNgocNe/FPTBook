@@ -52,20 +52,23 @@ namespace FPTBook.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "bookID,bookName,description,Img,stock_quantity,price,categoryID")] Book book, HttpPostedFileBase file)
         {
-            string pic = System.IO.Path.GetFileName(file.FileName);
-
-            if (file != null)
+           string pic = System.IO.Path.GetFileName(file.FileName);
+           string checkImg = Path.GetExtension(file.FileName);
+            if (checkImg.ToLower() == ".jpg" || checkImg.ToLower() == ".jpeg" || checkImg.ToLower() == ".png" && file != null && file.ContentLength > 0)
             {
-               
                 string path = Path.Combine(Server.MapPath("~/assets/img"), Path.GetFileName(file.FileName));
                 file.SaveAs(path);
                 book.Img = pic.ToString();
+                if (ModelState.IsValid)
+                {
+                    db.Books.Add(book);
+                    db.SaveChanges();
+                    return RedirectToAction("Index");
+                }
             }
-            if (true)
+            else
             {
-                db.Books.Add(book);
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                ViewBag.CheckError = "Invavlid file";
             }
 
             ViewBag.categoryID = new SelectList(db.Categories, "categoryID", "categoryName", book.categoryID);
@@ -93,33 +96,47 @@ namespace FPTBook.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "bookID,bookName,description,stock_quantity,price,Img,categoryID")] Book book, HttpPostedFileBase file, int id)
+        public ActionResult Edit(Book book, HttpPostedFileBase file, int id)
         {
-            Book rebook = db.Books.Find(id);
-            string pic = "";
-            if (file != null)
-            {
-                string file_name = book.Img;
-                string path1 = Server.MapPath("~/assets/img/");
-                FileInfo file1 = new FileInfo(path1 + file_name);
-                if (file1.Exists)
-                {
-                    file1.Delete();
-                }
-                pic = System.IO.Path.GetFileName(file.FileName);
-                string path = Path.Combine(Server.MapPath("~/assets/img/"), Path.GetFileName(file.FileName));
-                file.SaveAs(path);
-                rebook.Img = pic.ToString();
-            }
             if (ModelState.IsValid)
             {
-                rebook.bookName = book.bookName;
-                rebook.stock_quantity = book.stock_quantity;
-                rebook.price = book.price;
-                rebook.description = book.description;
-                rebook.categoryID = book.categoryID;
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                Book book1 = db.Books.Find(id);
+                if (file != null && file.ContentLength > 0)
+                {
+                    string pic= "";
+                    string file_name = book.Img;
+                    string path1 = Server.MapPath("~/assets/img/");
+                    string checkimg = Path.GetExtension(file.FileName);
+                    if (checkimg.ToLower() == ".jpg" || checkimg.ToLower() == ".jpeg" || checkimg.ToLower() == ".png")
+                    {
+                        FileInfo file1 = new FileInfo(path1 + file_name);
+                        if (file1.Exists)
+                        {
+                            file1.Delete();
+                        }
+                        pic = System.IO.Path.GetFileName(file.FileName);
+                        string path = Path.Combine(Server.MapPath("~/assets/img/"), Path.GetFileName(file.FileName));
+                        file.SaveAs(path);
+                        book1.Img = pic.ToString();
+                        db.SaveChanges();
+                        return RedirectToAction("Index");
+                    }
+                    else
+                    {
+                        ViewBag.CheckError = "*Invavlid file";
+                    }
+                }
+                else
+                {
+                    book1.bookName = book.bookName;
+                    book1.stock_quantity = book.stock_quantity;
+                    book1.price = book.price;
+                    book1.description = book.description;
+                    book1.categoryID = book.categoryID;
+                    db.SaveChanges();
+                    return RedirectToAction("Index");
+                }
+
             }
             ViewBag.categoryID = new SelectList(db.Categories, "categoryID", "categoryName", book.categoryID);
             return View(book);

@@ -63,7 +63,11 @@
     </div>
 
     </div>
-    <p>
-        @Html.ActionLink("Edit", "Edit", new { id = Model.username }) |
-        @Html.ActionLink("Back to List", "Index")
-    </p>
+<p>
+    <div class="row form-group ">
+        <div class="col-sm-6 ">
+            <a class="btn btn-primary d-block w-50" href="@Url.Action("Index","ManageUsers")" style="background: var(--bs-white); border-color: var(--bs-yellow);color:black ">Cancel</a>
+        </div>
+    </div>
+</p>
+

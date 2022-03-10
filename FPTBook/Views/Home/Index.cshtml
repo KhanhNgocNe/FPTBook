@@ -45,11 +45,19 @@
                                     <div class="card-body text-center mx-auto">
                                         <div class='cvp'>
                                             <h5 class="card-title font-weight-bold">@item.bookName</h5>
-                                            <p class="card-text"> $@item.price </p> 
+                                            <p class="card-text"> $@item.price </p>
                                             <a href="@Url.Action("Details","Books", new { id=item.bookID})" class="btn details px-auto" style="width:300px;">View details</a>
-                                            <br /> 
                                             <br />
-                                            <a href="@Url.Action("AddtoCart","Cart", new { id=item.bookID})" class="btn cart px-auto" style="background-color: var(--bs-yellow)">ADD TO CART</a>
+                                            <br />
+                                            @if (item.stock_quantity <= 0)
+                                            {
+                                                <p style="color:red"> Sold Out</p>
+                                            }
+                                            else
+                                            {
+                                                <a href="@Url.Action("AddtoCart","Cart", new { id=item.bookID})" class="btn cart px-auto" style="background-color: var(--bs-yellow)">ADD TO CART</a>
+                                            }
+
                                         </div>
                                     </div>
                                 </div>

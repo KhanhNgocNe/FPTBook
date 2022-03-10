@@ -24,9 +24,9 @@ namespace FPTBook.Models
         [Required(ErrorMessage = "Enter price, please")]
         [Range(3,1000)]
         public double price { get; set; }
+
         [DataType(DataType.Upload)]
-        [Display(Name = "Upload File")]
-        [Required(ErrorMessage = "Please choose file to upload.")]
+        [Display(Name = "Upload File")]      
         public string Img { get; set; }
         public int categoryID { get; set; }
         public virtual Category Category { get; set; }
