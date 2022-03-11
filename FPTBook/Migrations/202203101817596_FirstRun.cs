@@ -7,12 +7,10 @@ namespace FPTBook.Migrations
     {
         public override void Up()
         {
-            AlterColumn("dbo.Books", "Img", c => c.String());
         }
         
         public override void Down()
         {
-            AlterColumn("dbo.Books", "Img", c => c.String(nullable: false));
         }
     }
 }

@@ -40,13 +40,13 @@
                     {
                         <div class="col-sm-6 col-lg-4">
                             <div class='container-fluid'>
-                                <div class="card mx-auto col-md-3 col-10 mt-5">
+                                <div class="card ">
                                     <img class='mx-auto img-thumbnail' src="~/assets/img/@item.Img" width="500" height="300" />
                                     <div class="card-body text-center mx-auto">
                                         <div class='cvp'>
                                             <h5 class="card-title font-weight-bold">@item.bookName</h5>
                                             <p class="card-text"> $@item.price </p>
-                                            <a href="@Url.Action("Details","Books", new { id=item.bookID})" class="btn details px-auto" style="width:300px;">View details</a>
+                                            <a href="@Url.Action("Details","Books", new { id=item.bookID})" class="btn details px-auto" style="width:150px;">View details</a>
                                             <br />
                                             <br />
                                             @if (item.stock_quantity <= 0)

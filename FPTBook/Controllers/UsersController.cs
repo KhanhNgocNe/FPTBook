@@ -117,14 +117,9 @@ namespace FPTBook.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult EditInfor(User obj)
         {
-            User tmp = _db.Users.ToList().Find(s =>  s.username == obj.username); //find the customer in a list have the same ID with the ID input
-            if (tmp.password != obj.password)  //if find out the customer
+            if (ModelState.IsValid)
             {
-                tmp.password = GetMD5(obj.password);
-                tmp.confirmPassword = GetMD5(obj.confirmPassword);
-            }
-            
-            
+                User tmp = _db.Users.ToList().Find(s => s.username == obj.username);
                 tmp.username = obj.username;
                 tmp.fullname = obj.fullname;
                 tmp.telephone = obj.telephone;
@@ -132,12 +127,50 @@ namespace FPTBook.Controllers
                 tmp.gender = obj.gender;
                 tmp.birthday = obj.birthday;
                 tmp.address = obj.address;
-                tmp.state= obj.state=0;
-            _db.SaveChanges();
-            return RedirectToAction("Index", "Home");
+                tmp.state = obj.state = 0;
+                _db.SaveChanges();
+                return RedirectToAction("Index", "Home");
+            }
+            return View("EditInfor");
             
         }
+        public ActionResult ChangePassword()
+        {
+            var user = Session["username"];
+            if (user == null)
+            {
+                Response.Write("<script>alert('Please sign in to continue!'); window.location='/Users/Login'</script>");
+            }
+            return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult ChangePassword(User _user)
+        {
+            var user = Session["username"];
 
+            User objAccount = _db.Users.ToList().Find(p => p.username.Equals(user) && p.password.Equals(GetMD5(_user.currentPassword)));
+            if (objAccount == null)
+            {
+                ViewBag.Error = "Current Password is incorrect";
+                return View();
+            }
+            if (_user.newPassword != _user.confirmNewPassword)
+            {
+                ViewBag.Confirm = "The new password and confirmation new password do not match.";
+            }
+            else
+            {
+                objAccount.password = GetMD5(_user.newPassword);
+                objAccount.confirmPassword = objAccount.password;
+                _db.Users.Attach(objAccount);
+                _db.Entry(objAccount).Property(a => a.password).IsModified = true;
+                _db.SaveChanges();
+
+                ViewBag.Success = "Password Change successfully";
+            }
+            return View();
+        }
         //create a string MD5
         public static string GetMD5(string str)
         {

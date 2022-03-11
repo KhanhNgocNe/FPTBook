@@ -5,8 +5,8 @@
 }
 
 <body>
-    <!-- Start: Login Form Dark -->
     <section class="login-dark" style="background: var(--bs-warning);">
+    <!-- Start: Login Form Dark -->
         @using (Html.BeginForm("Login", "Users", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
         {
             @Html.AntiForgeryToken()
@@ -15,7 +15,7 @@
             <h2 align="center">Login Form</h2>
             <div class="illustration"><i class="icon ion-ios-locked-outline" style="color: var(--bs-white);"></i></div>
             <div class="mb-3">
-                @Html.TextBoxFor(model => model.username, "", new { @class = "form-control", @placeholder = "Username" })
+                @Html.TextBoxFor(model => model.username, "", new { @class = "form-control", @placeholder = "username" })
             </div>
             <div class="mb-3">
                 @Html.TextBoxFor(model => model.password, "", new { @class = "form-control", @type = "password", @placeholder = "Password" })

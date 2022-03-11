@@ -101,9 +101,9 @@ C:\Users\ASUS ViviBook\source\repos\FPTBook\FPTBook\bin\Microsoft.Owin.Security.
 C:\Users\ASUS ViviBook\source\repos\FPTBook\FPTBook\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\ASUS ViviBook\source\repos\FPTBook\FPTBook\bin\Microsoft.Owin.Security.OAuth.xml
 C:\Users\ASUS ViviBook\source\repos\FPTBook\FPTBook\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\ASUS ViviBook\source\repos\FPTBook\FPTBook\obj\Debug\FPTBook.csproj.CoreCompileInputs.cache
-C:\Users\ASUS ViviBook\source\repos\FPTBook\FPTBook\obj\Debug\FPTBook.dll
-C:\Users\ASUS ViviBook\source\repos\FPTBook\FPTBook\obj\Debug\FPTBook.pdb
 C:\Users\ASUS ViviBook\source\repos\FPTBook\FPTBook\obj\Debug\FPTBook.csproj.AssemblyReference.cache
 C:\Users\ASUS ViviBook\source\repos\FPTBook\FPTBook\obj\Debug\FPTBook.Migrations.FirstRun.resources
 C:\Users\ASUS ViviBook\source\repos\FPTBook\FPTBook\obj\Debug\FPTBook.csproj.GenerateResource.cache
+C:\Users\ASUS ViviBook\source\repos\FPTBook\FPTBook\obj\Debug\FPTBook.csproj.CoreCompileInputs.cache
+C:\Users\ASUS ViviBook\source\repos\FPTBook\FPTBook\obj\Debug\FPTBook.dll
+C:\Users\ASUS ViviBook\source\repos\FPTBook\FPTBook\obj\Debug\FPTBook.pdb
